@@ -1,3 +1,5 @@
+# thedon.com.br
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -32,17 +34,10 @@ This project also uses TailwindCSS, take a look at the following resources:
 
 Tailwind helps to avoid complex CSS code and having to deal with the specificity directly, of course other techniques could be used such as [BEM](https://getbem.com/introduction/) and [CSS Modules](https://github.com/css-modules/css-modules), but in general in my project inside my current project we're already using it and it have proven being very useful in production and battle tested also.
 
-To make running things locally easier, it also uses MSW (Mock Service Worker) to provide mocks to external APIs
-
-- [MSW](https://mswjs.io/) - Check it out the documentation
-
 Other tools that worth a look:
 
-- [React Hook Form](https://react-hook-form.com/)
 - [Next Intl](https://next-intl-docs.vercel.app/)
-- [Next-Auth](https://next-auth.js.org/)
 - [TanStack/React-Query](https://tanstack.com/query/v4)
-- [TanStack/React-Table](https://tanstack.com/table/v8)
 
 Thinks that improve quality and standarization of the project:
 
