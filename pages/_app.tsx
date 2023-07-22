@@ -17,7 +17,6 @@ import { NextIntlProvider } from 'next-intl'
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
   Layout?: typeof Root
-  auth?: boolean
 }
 
 type PageProps = {
