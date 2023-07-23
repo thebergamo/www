@@ -41,17 +41,21 @@ export async function getStaticProps({
     const slug = (params?.slug ?? '') as string
 
     post = getPostBySlug(slug, [
-      'canonical_url',
       'content',
       'date',
       'description',
       'image',
+      'image_credit',
+      'image_alt',
+      'original_post',
       'lang',
       'slug',
       'title',
     ])
 
     post.content = await convertMarkdownToHtml(post.content)
+    post.image_credit = await convertMarkdownToHtml(post.image_credit)
+
   } catch (err) {
     errorCode = 404
   }
