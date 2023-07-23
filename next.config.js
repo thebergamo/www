@@ -1,16 +1,28 @@
+const withNextIntl = require('next-intl/plugin')(
+  // This is the default (also the `src` folder is supported out of the box)
+  './i18n.ts'
+)
+
 /** @type {import('next').NextConfig} */
-module.exports = {
+module.exports = withNextIntl({
   reactStrictMode: true,
   swcMinify: true,
   images: {
     domains: ['localhost', 'avatars.githubusercontent.com'],
   },
-  i18n: {
-    locales: ['en-US', 'pt-BR'],
-    defaultLocale: 'en-US',
-  },
+  // i18n: {
+  //   locales: ['en-US', 'pt-BR'],
+  //   defaultLocale: 'en-US',
+  // },
   experimental: {
     swcPlugins: [],
+  },
+  webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
+    config.externals.push({
+      'utf-8-validate': 'commonjs utf-8-validate',
+      bufferutil: 'commonjs bufferutil',
+    })
+    return config
   },
   async headers() {
     return process.env.NODE_ENV === 'production'
@@ -22,7 +34,7 @@ module.exports = {
         ]
       : []
   },
-}
+})
 
 // https://nextjs.org/docs/advanced-features/security-headers
 const ContentSecurityPolicy = `

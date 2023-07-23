@@ -3,7 +3,7 @@
 const { spacing, fontFamily } = require('tailwindcss/defaultTheme')
 module.exports = {
   content: [
-    './apps/**/*.{ts,tsx,js,jsx}',
+    './app/**/*.{ts,tsx,js,jsx}',
     './pages/**/*.{ts,tsx,js,jsx}',
     './components/**/*.{ts,tsx,js,jsx}',
     './layouts/**/*.{ts,tsx,js,jsx}',

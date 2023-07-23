@@ -6,9 +6,11 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from 'components/Popover/Popover'
+import { useLocale } from 'next-intl'
 import Link from 'next/link'
-import { useRouter } from 'next/router'
 import React from 'react'
+import { locales, defaultLocale } from 'utils/locales'
+import { usePathname } from 'next/navigation'
 
 const languageMap: Record<string, React.FC> = {
   'pt-BR': BrazilFlag,
@@ -22,7 +24,8 @@ const getFlag = (locale: string) => {
 }
 
 export const LanguageSwitcher: React.FC = () => {
-  const { locale, defaultLocale, locales, pathname } = useRouter()
+  const locale = useLocale()
+  const pathname = usePathname() || ''
 
   return (
     <Popover>

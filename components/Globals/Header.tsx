@@ -1,9 +1,10 @@
+'use client'
 import cn from 'classnames'
 import { LanguageSwitcher } from 'components/LanguageSwitcher/LanguageSwitcher'
 import { ThemeSwitcher } from 'components/ThemeSwitcher/ThemeSwitcher'
 import { useTranslations } from 'next-intl'
 import NextLink from 'next/link'
-import { useRouter } from 'next/router'
+import { usePathname, useRouter } from 'next/navigation'
 import { SearchBox } from '../SearchBox/SearchBox'
 import globalsConfig from './globals.config'
 
@@ -13,9 +14,9 @@ type NavItemProps = {
 }
 
 function NavItem({ href, text }: NavItemProps) {
-  const router = useRouter()
+  const pathname = usePathname()
   const [, page] = href.split('/')
-  const [, currentPage] = router.asPath.split('/')
+  const [, currentPage] = pathname?.split('/') || []
   const isActive = currentPage === page
 
   return (
@@ -51,7 +52,7 @@ export function Header() {
         <div className="flex items-center gap-4">
           <ThemeSwitcher />
           <LanguageSwitcher />
-          <SearchBox />
+          {/*<SearchBox />*/}
         </div>
       </nav>
     </div>

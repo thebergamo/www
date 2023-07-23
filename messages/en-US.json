@@ -43,5 +43,10 @@
   },
   "Contact": {
     "title": "Contact"
+  },
+  "SocialImage": {
+    "siteTitle": "thedon.com.br",
+    "homeTite": "Marcos Bérgamo's website",
+    "homeSubtitle": "Senior Software Engineer and Architect"
   }
 }
