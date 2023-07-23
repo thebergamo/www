@@ -1,12 +1,12 @@
-import Link from "next/link";
-import globalsConfig from "./globals.config";
+import Link from 'next/link'
+import globalsConfig from './globals.config'
 
-const socials = globalsConfig.socials;
+const socials = globalsConfig.socials
 
 type ExternalLinkProps = {
-  href?: string;
-  text: string;
-};
+  href?: string
+  text: string
+}
 const ExternalLink = ({ href, text }: ExternalLinkProps) => (
   <a
     className="text-gray-500 hover:underline dark:hover:text-gray-200 transition"
@@ -16,7 +16,7 @@ const ExternalLink = ({ href, text }: ExternalLinkProps) => (
   >
     {text}
   </a>
-);
+)
 
 export default function Social() {
   return (
@@ -32,5 +32,5 @@ export default function Social() {
       ))}
       <ExternalLink href="/feed.xml" text="RSS" />
     </div>
-  );
+  )
 }

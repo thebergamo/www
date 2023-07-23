@@ -55,7 +55,6 @@ export async function getStaticProps({
 
     post.content = await convertMarkdownToHtml(post.content)
     post.image_credit = await convertMarkdownToHtml(post.image_credit)
-
   } catch (err) {
     errorCode = 404
   }

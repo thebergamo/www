@@ -127,5 +127,5 @@ export const BrazilFlag: React.FC = () => {
         />
       </g>
     </svg>
-  );
-};
+  )
+}

@@ -1,12 +1,12 @@
-import { useTheme } from 'next-themes';
-import { useState, useEffect } from 'react';
+import { useTheme } from 'next-themes'
+import { useState, useEffect } from 'react'
 
 export const ThemeSwitcher: React.FC = () => {
-  const [mounted, setMounted] = useState(false);
-  const { resolvedTheme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false)
+  const { resolvedTheme, setTheme } = useTheme()
 
   // After mounting, we have access to the theme
-  useEffect(() => setMounted(true), []);
+  useEffect(() => setMounted(true), [])
 
   return (
     <button
@@ -41,5 +41,5 @@ export const ThemeSwitcher: React.FC = () => {
         </svg>
       )}
     </button>
-  );
-};
+  )
+}

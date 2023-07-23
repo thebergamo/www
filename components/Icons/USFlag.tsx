@@ -23,5 +23,5 @@ export const USFlag: React.FC = () => {
         />
       </g>
     </svg>
-  );
-};
+  )
+}

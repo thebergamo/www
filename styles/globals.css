@@ -23,19 +23,20 @@ h1 {
   @apply font-bold text-3xl md:text-5xl mb-1;
 }
 
-.editor-toolbar button.active, .editor-toolbar button:hover {
+.editor-toolbar button.active,
+.editor-toolbar button:hover {
   background: #47a3f3 !important;
 }
 
 /* https://seek-oss.github.io/capsize/ */
 .capsize::before {
-  content: "";
+  content: '';
   margin-bottom: -0.098em;
   display: table;
 }
 
 .capsize::after {
-  content: "";
+  content: '';
   margin-top: -0.219em;
   display: table;
 }
@@ -79,7 +80,7 @@ h1 {
 
 .prose .anchor:after {
   @apply text-gray-300 dark:text-gray-700;
-  content: "#";
+  content: '#';
 }
 
 .prose *:hover > .anchor {
@@ -165,8 +166,8 @@ h1 {
   @apply text-yellow-500;
 }
 
-code[class*="language-"],
-pre[class*="language-"] {
+code[class*='language-'],
+pre[class*='language-'] {
   @apply text-gray-800 dark:text-gray-50;
 }
 
@@ -192,8 +193,8 @@ pre {
 }
 
 /* Remove Safari input shadow on mobile */
-input[type="text"],
-input[type="email"] {
+input[type='text'],
+input[type='email'] {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;

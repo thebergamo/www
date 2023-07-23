@@ -3,12 +3,12 @@ title: Generate social images as a service
 description: "Automate social image generation is a real part of our work in some areas. Plenty of SaaS there which we could use, but not all the time they're that affordable. If you had a simple use case like mine, you may find this post a good start point to build your solution in a cost effective way."
 image: /static/img/posts/generate-socials/phone-cover.jpg
 lang: en-US
-date: "2021-07-21"
+date: '2021-07-21'
 tweet: 1419780182945280002
 tags: architecture, aws, cloud, development, en-us, engineering, nodejs
 ---
 
-This weekend, during a weekly meeting of [TáBarato! App](https://www.tabaratoapp.com/) an idea came out on how we as a really small team could improve our engagement on social media. 
+This weekend, during a weekly meeting of [TáBarato! App](https://www.tabaratoapp.com/) an idea came out on how we as a really small team could improve our engagement on social media.
 
 A very nice idea came out that we could have some more posts with some interesting data that we already have and our users would like to have it on their feed and potentially being interested in download our app.
 
@@ -44,7 +44,7 @@ After being satisfied with end result, then I moved to the Building phase 😉
 
 # Building phase
 
-Take a look on how my template is supposed to looks like: 
+Take a look on how my template is supposed to looks like:
 
 ```tsx
 const template = {
@@ -55,74 +55,74 @@ const template = {
   },
   layers: [
     {
-      type: "box",
+      type: 'box',
       position: [200, 100],
       width: 650,
       height: 250,
-      background: "white",
+      background: 'white',
     },
     {
-      type: "box",
+      type: 'box',
       position: [600, 300],
       width: 650,
       height: 250,
-      background: "white",
+      background: 'white',
     },
     {
-      type: "text",
+      type: 'text',
       position: [220, 120],
-      color: "black",
-      input: "productDescription1",
+      color: 'black',
+      input: 'productDescription1',
     },
     {
-      type: "text",
+      type: 'text',
       position: [280, 120],
-      color: "black",
-      input: "productPrice1",
+      color: 'black',
+      input: 'productPrice1',
     },
     {
-      type: "image",
+      type: 'image',
       position: [200, 500],
-      background: "transparent",
+      background: 'transparent',
       width: 240,
       height: 360,
-      input: "productImage1",
+      input: 'productImage1',
     },
     {
-      type: "text",
+      type: 'text',
       position: [620, 320],
-      color: "black",
-      input: "productDescription2",
+      color: 'black',
+      input: 'productDescription2',
     },
     {
-      type: "text",
+      type: 'text',
       position: [680, 320],
-      color: "black",
-      input: "productPrice2",
+      color: 'black',
+      input: 'productPrice2',
     },
     {
-      type: "image",
+      type: 'image',
       position: [600, 700],
-      background: "transparent",
+      background: 'transparent',
       width: 240,
       height: 360,
-      input: "productImage2",
+      input: 'productImage2',
     },
   ],
-};
+}
 ```
 
 Then, let me explain a bit on how this template is supposed to work:
 
 ## Stage
 
-Stage property sets as the name suggest the stage for the other changes, like when you're starting a new file in Photoshop or Figma, you need to set your stage before beginning. 
+Stage property sets as the name suggest the stage for the other changes, like when you're starting a new file in Photoshop or Figma, you need to set your stage before beginning.
 
 So, simple as providing the size and initial background color.
 
 ## Layers
 
-This is where the magic begins. Every single component should be a layer, so they're arguably independent. 
+This is where the magic begins. Every single component should be a layer, so they're arguably independent.
 
 Those layers have types (described below) and the specific properties from those types.
 
@@ -159,21 +159,21 @@ This would define the name of variable which my generator needs to looks after i
 
 ```tsx
 const variables = [
-  { name: "productDescription1", text: "Cenoura" },
-  { name: "productPrice1", text: "R$: 12,59" },
+  { name: 'productDescription1', text: 'Cenoura' },
+  { name: 'productPrice1', text: 'R$: 12,59' },
   {
-    name: "productImage1",
+    name: 'productImage1',
     image_url:
-      "https://s3.amazonaws.com/my-awesome-bucket/images/product/Cenoura.png",
+      'https://s3.amazonaws.com/my-awesome-bucket/images/product/Cenoura.png',
   },
-  { name: "productDescription2", text: "Frango Aurora" },
-  { name: "productPrice2", text: "R$: 6,99" },
+  { name: 'productDescription2', text: 'Frango Aurora' },
+  { name: 'productPrice2', text: 'R$: 6,99' },
   {
-    name: "productImage2",
+    name: 'productImage2',
     image_url:
-      "https://s3.amazonaws.com/my-awesome-bucket/images/product/coxa.frango-aurora.png",
+      'https://s3.amazonaws.com/my-awesome-bucket/images/product/coxa.frango-aurora.png',
   },
-];
+]
 ```
 
 So, this is how my variables looks like and how I would include my custom data to be displayed based on the template.
@@ -186,8 +186,6 @@ So, this is how my variables looks like and how I would include my custom data t
 ## The generator
 
 So, both of our inputs are in place now we must implement a way to transform this code into something that we could possibility think of post into our socials.
-
- 
 
 ![Final result](/static/img/posts/generate-socials/result.png)
 
@@ -238,7 +236,7 @@ function processText(stage, layer) {
         x="0"
         y="0"
       />`
-          : ""
+          : ''
       }
       <text
         fill="${layer.color}"
@@ -252,13 +250,13 @@ function processText(stage, layer) {
       </text>
     </g>
   </svg>
-  `);
+  `)
 
   return {
     input: textInput,
     top: layer.position[0],
     left: layer.position[1],
-  };
+  }
 }
 ```
 
@@ -268,23 +266,23 @@ Basically the SVG and using it to display the text and boxes was the easiest way
 
 ```tsx
 export async function generate(template, modifications) {
-  const { stage, layers: rawLayers } = template;
-  const layers = addVariablesToLayers(rawLayers, modifications);
+  const { stage, layers: rawLayers } = template
+  const layers = addVariablesToLayers(rawLayers, modifications)
 
   const layersPromise = layers.map((layer) => {
     switch (layer.type) {
-      case "background-image":
-        return processBackground(stage, layer);
-      case "text":
-        return processText(stage, layer);
-      case "image":
-        return processImage(stage, layer);
-      case "box":
-        return processBox(stage, layer);
+      case 'background-image':
+        return processBackground(stage, layer)
+      case 'text':
+        return processText(stage, layer)
+      case 'image':
+        return processImage(stage, layer)
+      case 'box':
+        return processBox(stage, layer)
     }
-  });
+  })
 
-  const readyLayers = await Promise.all(layersPromise);
+  const readyLayers = await Promise.all(layersPromise)
 
   await sharp({
     create: {
@@ -296,9 +294,9 @@ export async function generate(template, modifications) {
   })
     .composite(readyLayers)
     .png()
-    .toFile("./tmp/result.png")
-    .catch(console.error);
-} 
+    .toFile('./tmp/result.png')
+    .catch(console.error)
+}
 ```
 
 This as simple as how I got it to work and generate the result you saw above also based on the template showed above.
@@ -307,13 +305,13 @@ This as simple as how I got it to work and generate the result you saw above als
 
 **Visual Appeal**
 
-At this point this generator is very rustic, although useful for the purpose I made it. 
+At this point this generator is very rustic, although useful for the purpose I made it.
 
 As I mentioned above, dealing with the SVG directly is my main pain point, but it could be overcome after some more deep dive into them.
 
 It would enable me to create much more appealing view of those images.
 
- **Calculating Positions**
+**Calculating Positions**
 
 For simple use cases this should be ok doing it, but starting with a real generator that we would need not constant, but changes that can happen often, would be better to build a visual builder for the template, even with simple UI, but at least to help with positioning and sizing (preview also) of the layers of the template would be useful and make our life easier.
 

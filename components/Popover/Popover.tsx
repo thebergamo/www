@@ -1,8 +1,8 @@
-import * as PopoverPrimitive from '@radix-ui/react-popover';
-import { PropsWithChildren } from 'react';
+import * as PopoverPrimitive from '@radix-ui/react-popover'
+import { PropsWithChildren } from 'react'
 
-export const Popover = PopoverPrimitive.Root;
-export const PopoverTrigger = PopoverPrimitive.Trigger;
+export const Popover = PopoverPrimitive.Root
+export const PopoverTrigger = PopoverPrimitive.Trigger
 export const PopoverContent: React.FC<
   PropsWithChildren<PopoverPrimitive.PopoverContentProps>
 > = ({ children, ...props }) => {
@@ -14,5 +14,5 @@ export const PopoverContent: React.FC<
         </div>
       </div>
     </PopoverPrimitive.Content>
-  );
-};
+  )
+}

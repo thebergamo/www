@@ -1,7 +1,7 @@
 ---
 title: You might not need a computer science degree
 description: For sure you might not need a CS degree, but that does not mean that you shouldn't learn it somehow.
-date: "2018-12-16"
+date: '2018-12-16'
 tags: computer-science, en-us, opinion
 lang: en-US
 image: /static/img/posts/cs-degree/cover.jpg
@@ -23,7 +23,6 @@ So, as you read these words, you might think that you should drop off your curre
 I always advocate that, a CS degree is important for one thing.
 
 > Getting to know that some smart people had already faced few problems in the past that you might suffer from or not, but it’s always good to know that some solutions already exist, and even though you might not have the same problem, you can adapt an existing solution.
-> 
 
 But you can still learn these things without going to any university, you can find good materials around internet related to open courses and so on. So, just in case I will try to suggest few options to learn. (If I get more suggestions I may update the list)
 
