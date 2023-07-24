@@ -9,15 +9,8 @@ type Props = {
 }
 
 export default function PostLayout({ children }: Props) {
-  const {
-    title,
-    image,
-    date,
-    content,
-    image_alt,
-    image_credit,
-    original_post,
-  } = children.props.post
+  const { title, image, date, content, image_alt, image_credit } =
+    children.props.post
 
   return (
     <>
@@ -34,7 +27,6 @@ export default function PostLayout({ children }: Props) {
             content={content}
             imageAlt={image_alt}
             imageCredit={image_credit}
-            originalPost={original_post}
           />
           <PostContent>
             <PostContainer>{children}</PostContainer>

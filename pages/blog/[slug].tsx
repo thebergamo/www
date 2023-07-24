@@ -47,7 +47,6 @@ export async function getStaticProps({
       'image',
       'image_credit',
       'image_alt',
-      'original_post',
       'lang',
       'slug',
       'title',

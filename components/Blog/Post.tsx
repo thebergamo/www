@@ -19,14 +19,15 @@ export const PostHeader: React.FC<{
   content: string
   imageCredit?: string
   imageAlt?: string
-  originalPost?: string
-}> = ({ title, image, date, content, imageCredit, imageAlt, originalPost }) => {
+}> = ({ title, image, date, content, imageCredit, imageAlt }) => {
   const t = useTranslations('Post')
   const stats = readingTime(content)
   return (
     <div className="h-screen flex justify-center flex-col">
       <h1 className="lg:text-7xl text-4xl text-center z-30">{title}</h1>
       <span
+        role="img"
+        aria-label={imageAlt}
         className="absolute right-0 top-0 opacity-20 h-screen bg-cover bg-center w-full z-0"
         style={{ backgroundImage: `url(${image})` }}
       />
