@@ -1,0 +1,4 @@
+{
+  "*": ["pnpm prettier:write", "pnpm eslint"],
+  "articles/*.md": "pnpm proselint"
+}
