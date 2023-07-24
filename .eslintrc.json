@@ -1,6 +1,12 @@
 {
   "extends": ["eslint:recommended", "next/core-web-vitals"],
-  "ignorePatterns": [".husky/**", "*.yaml", "*.json"],
+  "ignorePatterns": [
+    ".husky/**",
+    "*.yaml",
+    "*.json",
+    "**/*.md",
+    "public/**/*.*"
+  ],
   "overrides": [
     {
       "files": ["*.ts", "*.tsx"],

@@ -24,7 +24,7 @@ I always advocate that, a CS degree is important for one thing.
 
 > Getting to know that some smart people had already faced few problems in the past that you might suffer from or not, but it’s always good to know that some solutions already exist, and even though you might not have the same problem, you can adapt an existing solution.
 
-But you can still learn these things without going to any university, you can find good materials around internet related to open courses and so on. So, just in case I will try to suggest few options to learn. (If I get more suggestions I may update the list)
+You can still learn these things without going to any university, you can find good materials around internet related to open courses and so on. So, just in case I will try to suggest few options to learn. (If I get more suggestions I may update the list)
 
 - [https://github.com/ossu/computer-science](https://github.com/ossu/computer-science)
 - [https://www.mooc-list.com/tags/computer-science](https://www.mooc-list.com/tags/computer-science)
@@ -39,7 +39,7 @@ There is no book to teach you how to “Keep it simple”, just time and experie
 
 We live in the information era, good practices are everywhere, lots of useful projects are shared in Github every day, even maybe some might not be that useful, but you can still learn from that.
 
-So, some types of people might not need a degree in computer science to not know these concepts, patterns, theorems and etc, because they look for more information, if you’re one of these people, it’s really great for you, spread your knowledge inside your team, your community, in the world.
+So, some types of people might not need a degree in computer science to not know these concepts, patterns, theorems and so on, because they look for more information, if you’re one of these people, it’s really great for you, spread your knowledge inside your team, your community, in the world.
 
 Some others might need it because, learning on your own is not that simple (remember that I said that simple, is not that simple?), you might need some guidance, help and then a university or course would you help to improve your knowledge and be **a better professional**.
 

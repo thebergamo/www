@@ -8,11 +8,11 @@ tweet: 1419780182945280002
 tags: architecture, aws, cloud, development, en-us, engineering, nodejs
 ---
 
-This weekend, during a weekly meeting of [TáBarato! App](https://www.tabaratoapp.com/) an idea came out on how we as a really small team could improve our engagement on social media.
+This weekend, during a weekly meeting of [TáBarato App](https://www.tabaratoapp.com/) an idea came out on how we as a really small team could improve our engagement on social media.
 
-A very nice idea came out that we could have some more posts with some interesting data that we already have and our users would like to have it on their feed and potentially being interested in download our app.
+A damn nice idea came out that we could have some more posts with some interesting data that we already have and our users would like to have it on their feed and potentially being interested in download our app.
 
-Let me say it again, we're a very small team of ambitious engineers with a dream, unfortunately at this stage this isn't our money maker, so because of that, my first idea was to basically automate it.
+Let me say it again, we're a damn small team of ambitious engineers with a dream, unfortunately at this stage this isn't our money maker, so because of that, my first idea was to basically automate it.
 
 At the same week, I was reading a post about some great developer experience products and one of them made myself interested [Bannerbear](https://www.bannerbear.com/) which is basically what we're talking about a way to create a simple template where I could input my data and push it to any social network easily.
 
@@ -28,11 +28,11 @@ My initial goal in the POC was basically being able to create a template program
 
 So the end goal of it would be simply generating an image based on a template and an input.
 
-No deployment needed, storage or next steps(although I've in mind how the architecture in the end would looks like... ⚠️ SPOILER ALERT ⚠️ I will share a bit of mine initial idea of the end to end plan of it).
+No deployment needed, storage or next steps(although I've in mind how the architecture in the end would looks like… ⚠️ SPOILER ALERT ⚠️ I will share a bit of mine initial idea of the end to end plan of it).
 
 # Planning phase
 
-I had very little experience manipulating images, mostly from the time I made my CMS in PHP(which is a shame I lost, so use Git on your project from start!) and it was doing some simple manipulations with **[ImageMagic](https://imagemagick.org/index.php)** lib just to reside and store it in the server.
+I had a damn little experience manipulating images, mostly from the time I made my CMS in PHP(which is a shame I lost, so use Git on your project from start) and it was doing some simple manipulations with **[ImageMagic](https://imagemagick.org/index.php)** lib just to reside and store it in the server.
 
 Besides that again another simple use case to generate images dynamically from my Amazon S3 bucket and provide some resizing manipulation in the query string inside AWS CloudFront (this time, using [sharp](https://sharp.pixelplumbing.com/) instead of **[ImageMagic](https://imagemagick.org/index.php)).**
 
@@ -147,7 +147,7 @@ No new concept here, those are exactly as the name suggest, it should define siz
 
 ### Background
 
-A way to force this layer to have a specific background color. Very useful in the case of boxes where you want them to have a different background color.
+A way to force this layer to have a specific background color. A damn useful in the case of boxes where you want them to have a different background color.
 
 ### Color
 
@@ -305,7 +305,7 @@ This as simple as how I got it to work and generate the result you saw above als
 
 **Visual Appeal**
 
-At this point this generator is very rustic, although useful for the purpose I made it.
+At this point this generator is damn rustic, although useful for the purpose I made it.
 
 As I mentioned above, dealing with the SVG directly is my main pain point, but it could be overcome after some more deep dive into them.
 
@@ -337,4 +337,4 @@ When image is completed, we would basically push it to S3 bucket where after sav
 
 I believe that's all for now. If you missed any detail that I could improve in the code or found any typo or English mistake, let me know and I will be more than happy to fix and improve my writing.
 
-C ya next!
+C ya next

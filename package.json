@@ -9,10 +9,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prettier": "prettier -c --ignore-unknown .",
+    "prettier:check": "prettier -c --ignore-unknown .",
     "prettier:write": "prettier --write --ignore-unknown .",
-    "eslint": "eslint .",
-    "proselint": "proselint articles/*.md"
+    "proselint:check": "proselint articles/*.md"
   },
   "dependencies": {
     "@faceless-ui/scroll-info": "^1.3.0",

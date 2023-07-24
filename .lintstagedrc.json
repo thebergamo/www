@@ -1,4 +1,4 @@
 {
-  "*": ["pnpm prettier:write", "pnpm eslint"],
+  "*": ["pnpm prettier --write --ignore-unknown", "pnpm eslint"],
   "articles/*.md": "pnpm proselint"
 }
