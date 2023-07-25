@@ -3,6 +3,7 @@ import Root from 'components/Layout/Root'
 import { convertMarkdownToHtml, getAllPosts, getPostBySlug } from 'lib/blog'
 import pick from 'lodash/pick'
 import { GetStaticPropsContext } from 'next'
+import { useTranslations } from 'next-intl'
 
 export type Props = {
   errorCode?: number
@@ -10,6 +11,7 @@ export type Props = {
 }
 
 function BlogPage({ post, errorCode }: Props) {
+  const t = useTranslations('Post')
   if (errorCode) {
     return (
       <>
@@ -19,10 +21,25 @@ function BlogPage({ post, errorCode }: Props) {
   }
 
   return (
-    <span
-      className="prose dark:prose-invert max-w-prose"
-      dangerouslySetInnerHTML={{ __html: post.content }}
-    />
+    <>
+      <aside className="bg-orange-300 rounded-lg p-4 text-lg">
+        <div className="flex flex-row">
+          <p className="text-2xl p-2 mx-2">🔄</p>
+          <p>
+            {t('disclaimer')}
+            <a className="underline" href={post.original_post}>
+              {t('original')}.
+            </a>
+            <br />
+            {t('reason')}
+          </p>
+        </div>
+      </aside>
+      <span
+        className="prose dark:prose-invert max-w-prose"
+        dangerouslySetInnerHTML={{ __html: post.content }}
+      />
+    </>
   )
 }
 
@@ -50,6 +67,7 @@ export async function getStaticProps({
       'lang',
       'slug',
       'title',
+      'original_post',
     ])
 
     post.content = await convertMarkdownToHtml(post.content)

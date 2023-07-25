@@ -52,8 +52,18 @@ export async function getStaticProps({ locale }: GetStaticPropsContext) {
     'content',
     'description',
   ]
+  // TODO: have a better way to handle featured posts and limit
   const featuredPosts = [
     getPostBySlug('generate-social-images-as-a-service', featuredParams),
+    getPostBySlug(
+      'precisamos-falar-sobre-os-novos-desevolvedores',
+      featuredParams
+    ),
+    getPostBySlug(
+      'you-might-not-need-a-computer-science-degree',
+      featuredParams
+    ),
+    getPostBySlug('uma-visao-sobre-nosql', featuredParams),
   ]
   return {
     props: {

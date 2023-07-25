@@ -29,7 +29,10 @@
     "subtitle": "Aqui é o lugar onde eu compartilho minhas ideias e meus aprendizados em público"
   },
   "Post": {
-    "readingTime": "{time, number} min de leitura"
+    "readingTime": "{time, number} minutos",
+    "disclaimer": "Esse artigo foi originalmente postado em uma plataforma differente. Você ainda pode visitar o ",
+    "original": "artigo original",
+    "reason": "Devido a razões de arquivo, não houveram modificações(apenas correções gramaticais) aplicadas, salvo quando especificado."
   },
   "About": {
     "title": "Prazer em te conhecer!",

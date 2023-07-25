@@ -22,7 +22,7 @@ const getFlag = (locale: string) => {
 }
 
 export const LanguageSwitcher: React.FC = () => {
-  const { locale, defaultLocale, locales, pathname } = useRouter()
+  const { locale, defaultLocale, locales, asPath } = useRouter()
 
   return (
     <Popover>
@@ -40,7 +40,7 @@ export const LanguageSwitcher: React.FC = () => {
             {locales?.map((l) => (
               <Link
                 key={l}
-                href={pathname}
+                href={asPath}
                 locale={l}
                 className={classNames(
                   locale === l

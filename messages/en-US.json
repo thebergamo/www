@@ -29,7 +29,10 @@
     "subtitle": "This is the place where I share my thoughs and my learnings in public"
   },
   "Post": {
-    "readingTime": "{time, number} min read"
+    "readingTime": "{time, number} min read",
+    "disclaimer": "This post was originally posted in a different platform. You can still visit the ",
+    "original": "original post",
+    "reason": "Due to that for archive reasons, no update(unless grammar ones) are applied unless stated."
   },
   "About": {
     "title": "Nice to meet you!",
