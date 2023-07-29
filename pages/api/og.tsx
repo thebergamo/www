@@ -26,10 +26,10 @@ export default async function handler(request: NextRequest) {
     const hasImage = searchParams.has('image')
     const title = searchParams.has('title')
       ? searchParams.get('title')?.slice(0, 100)
-      : t('homeTitle')
+      : t('home.title')
     const subtitle = searchParams.has('subtitle')
       ? searchParams.get('subtitle')
-      : t('homeSubtitle')
+      : t('home.subtitle')
     const imageUrl = hasImage ? `${searchParams.get('image')}` : ''
     console.log({
       imageUrl,
