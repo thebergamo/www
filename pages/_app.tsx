@@ -14,6 +14,8 @@ import {
   QueryClientProvider,
 } from '@tanstack/react-query'
 import { NextIntlProvider } from 'next-intl'
+import { DefaultSeo } from 'next-seo'
+import SEO from 'lib/next-seo.config'
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
   Layout?: typeof Root
@@ -42,21 +44,24 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   const [queryClient] = useState(() => new QueryClient())
   const Layout = Component.Layout || Root
   return (
-    <ScrollInfoProvider>
-      <WindowInfoProvider breakpoints={breakpoints}>
-        <QueryClientProvider client={queryClient}>
-          <Hydrate state={pageProps.dehydratedState}>
-            <ThemeProvider attribute="class">
-              <NextIntlProvider messages={pageProps.messages}>
-                <Layout>
-                  <Component {...pageProps} />
-                </Layout>
-              </NextIntlProvider>
-            </ThemeProvider>
-          </Hydrate>
-        </QueryClientProvider>
-      </WindowInfoProvider>
-    </ScrollInfoProvider>
+    <>
+      <DefaultSeo {...SEO} />
+      <ScrollInfoProvider>
+        <WindowInfoProvider breakpoints={breakpoints}>
+          <QueryClientProvider client={queryClient}>
+            <Hydrate state={pageProps.dehydratedState}>
+              <ThemeProvider attribute="class">
+                <NextIntlProvider messages={pageProps.messages}>
+                  <Layout>
+                    <Component {...pageProps} />
+                  </Layout>
+                </NextIntlProvider>
+              </ThemeProvider>
+            </Hydrate>
+          </QueryClientProvider>
+        </WindowInfoProvider>
+      </ScrollInfoProvider>
+    </>
   )
 }
 

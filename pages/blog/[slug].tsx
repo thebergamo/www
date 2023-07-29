@@ -4,6 +4,7 @@ import { convertMarkdownToHtml, getAllPosts, getPostBySlug } from 'lib/blog'
 import pick from 'lodash/pick'
 import { GetStaticPropsContext } from 'next'
 import { useTranslations } from 'next-intl'
+import { NextSeo } from 'next-seo'
 
 export type Props = {
   errorCode?: number
@@ -19,9 +20,40 @@ function BlogPage({ post, errorCode }: Props) {
       </>
     )
   }
-
   return (
     <>
+      <NextSeo
+        title={post.title}
+        description={post.description}
+        canonical={`https://www.thedon.com.br/blog/${post.slug}`}
+        openGraph={{
+          title: post.title,
+          description: post.description,
+          url: `https://www.thedon.com.br/blog/${post.slug}`,
+          type: 'article',
+          article: {
+            tags: post.tags.split(','),
+            publishedTime: post.date,
+            modifiedTime: post.date,
+          },
+          images: [
+            {
+              url: `${
+                process.env.VERCEL_URL
+                  ? 'https://' + process.env.VERCEL_URL
+                  : ''
+              }/api/og?title=${post.title}&subtitle=${post.description?.slice(
+                0,
+                120
+              )}&image=${post.image}&article=true`,
+              width: 1200,
+              height: 630,
+              alt: 'Marcos Bérgamo memoji smiling',
+              type: 'image/png',
+            },
+          ],
+        }}
+      />
       <aside className="bg-orange-300 rounded-lg p-4 text-lg">
         <div className="flex flex-row">
           <p className="text-2xl p-2 mx-2">🔄</p>
@@ -62,6 +94,7 @@ export async function getStaticProps({
       'date',
       'description',
       'image',
+      'tags',
       'image_credit',
       'image_alt',
       'lang',
