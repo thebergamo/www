@@ -8,7 +8,6 @@ export const config = {
 
 export default async function handler(request: NextRequest) {
   try {
-    //const image = new URL('../../public/avatar-hello.png', import.meta.url)
     const { searchParams, pathname } = new URL(request.url)
     const langSegment = pathname.split('/')[1]
     const language = ['pt-BR', 'en-US'].includes(langSegment)
