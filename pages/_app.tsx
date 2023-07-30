@@ -15,6 +15,7 @@ import {
 } from '@tanstack/react-query'
 import { NextIntlProvider } from 'next-intl'
 import { DefaultSeo } from 'next-seo'
+import { Analytics } from '@vercel/analytics/react'
 import SEO from 'lib/next-seo.config'
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
@@ -61,6 +62,7 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
           </QueryClientProvider>
         </WindowInfoProvider>
       </ScrollInfoProvider>
+      <Analytics />
     </>
   )
 }
