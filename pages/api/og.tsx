@@ -22,18 +22,23 @@ export default async function handler(request: NextRequest) {
       namespace: 'SocialImage',
     })
 
+    console.info('TRANSLATOR')
     const hasImage = searchParams.has('image')
+    console.info('HAS IMAGE', hasImage)
     const title = searchParams.has('title')
       ? searchParams.get('title')?.slice(0, 100)
       : t('home.title')
+    console.info('HAS TITLE', title)
     const subtitle = searchParams.has('subtitle')
       ? searchParams.get('subtitle')
       : t('home.subtitle')
+    console.info('HAS SUBTITLE', subtitle)
     const imageUrl = hasImage ? `${searchParams.get('image')}` : ''
-    console.log({
+
+    console.info('IMAGE RECEIVED', {
       imageUrl,
-      url: new URL(imageUrl, import.meta.url).toString(),
     })
+
     const image = process.env.VERCEL_URL
       ? `https://${process.env.VERCEL_URL}${imageUrl}`
       : `http://localhost:3000${imageUrl}`
