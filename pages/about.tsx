@@ -1,11 +1,15 @@
 import pick from 'lodash/pick'
 import { GetStaticPropsContext } from 'next'
 import Root from 'components/Layout/Root'
-import { useTranslations } from 'next-intl'
+import { createTranslator, useTranslations } from 'next-intl'
 import Image from 'next/image'
 import { NextSeo } from 'next-seo'
+import { generateImage } from 'lib/og-generator'
 
-function AboutPage() {
+export type Props = {
+  ogImage: string
+}
+function AboutPage(props: Props) {
   const t = useTranslations('About')
   const tog = useTranslations('SocialImage')
   return (
@@ -16,13 +20,7 @@ function AboutPage() {
           description: tog('about.subtitle'),
           images: [
             {
-              url: `${
-                process.env.VERCEL_URL
-                  ? 'https://' + process.env.VERCEL_URL
-                  : ''
-              }/api/og?title=${tog('about.title')}&subtitle=${tog(
-                'about.subtitle'
-              )}&image=/avatar.png`,
+              url: props.ogImage,
               width: 1200,
               height: 630,
               alt: 'Marcos Bérgamo memoji smiling',
@@ -120,12 +118,31 @@ export default AboutPage
 AboutPage.messages = ['About', ...Root.messages]
 
 export async function getStaticProps({ locale }: GetStaticPropsContext) {
+  const tMessages = await import(`../messages/${locale}.json`)
+
+  const t = createTranslator({
+    messages: tMessages,
+    locale: locale || 'en-US',
+    namespace: 'SocialImage',
+  })
+
+  const ogImage = await generateImage({
+    data: {
+      title: t('about.title'),
+      subtitle: t('about.subtitle'),
+      imagePath: 'avatar-contact.png',
+    },
+    outputName: 'about',
+    options: {
+      width: 1200,
+      height: 630,
+    },
+  })
+
   return {
     props: {
-      messages: pick(
-        await import(`../messages/${locale}.json`),
-        AboutPage.messages
-      ),
+      ogImage,
+      messages: pick(tMessages, AboutPage.messages),
     },
   }
 }

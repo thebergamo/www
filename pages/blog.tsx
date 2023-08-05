@@ -2,15 +2,17 @@ import pick from 'lodash/pick'
 import { GetStaticPropsContext } from 'next'
 import Root from 'components/Layout/Root'
 import Image from 'next/image'
-import { useTranslations } from 'next-intl'
+import { createTranslator, useTranslations } from 'next-intl'
 import { FeaturedPosts } from 'components/Blocks/FeaturedPosts'
 import { getAllPosts, getPostBySlug } from 'lib/blog'
 import { PostList } from 'components/Blocks/PostList'
 import { NextSeo } from 'next-seo'
+import { generateImage } from 'lib/og-generator'
 
 export type Props = {
   featuredPosts: any[]
   allPosts: any[]
+  ogImage: string
 }
 
 function BlogPage(props: Props) {
@@ -24,13 +26,7 @@ function BlogPage(props: Props) {
           description: tog('blog.subtitle'),
           images: [
             {
-              url: `${
-                process.env.VERCEL_URL
-                  ? 'https://' + process.env.VERCEL_URL
-                  : ''
-              }/api/og?title=${tog('blog.title')}&subtitle=${tog(
-                'blog.subtitle'
-              )}&image=/avatar.png`,
+              url: props.ogImage,
               width: 1200,
               height: 630,
               alt: 'Marcos Bérgamo memoji smiling',
@@ -70,6 +66,7 @@ export default BlogPage
 BlogPage.messages = ['Blog', 'Post', ...Root.messages]
 
 export async function getStaticProps({ locale }: GetStaticPropsContext) {
+  const tMessages = await import(`../messages/${locale}.json`)
   const featuredParams = [
     'date',
     'slug',
@@ -101,14 +98,32 @@ export async function getStaticProps({ locale }: GetStaticPropsContext) {
     'description',
     'content',
   ])
+
+  const t = createTranslator({
+    messages: tMessages,
+    locale: locale || 'en-US',
+    namespace: 'SocialImage',
+  })
+
+  const ogImage = await generateImage({
+    data: {
+      title: t('blog.title'),
+      subtitle: t('blog.subtitle'),
+      imagePath: 'avatar.png',
+    },
+    outputName: 'blog',
+    options: {
+      width: 1200,
+      height: 630,
+    },
+  })
+
   return {
     props: {
       featuredPosts,
       allPosts,
-      messages: pick(
-        await import(`../messages/${locale}.json`),
-        BlogPage.messages
-      ),
+      ogImage,
+      messages: pick(tMessages, BlogPage.messages),
     },
   }
 }

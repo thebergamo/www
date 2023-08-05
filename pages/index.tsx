@@ -2,13 +2,16 @@ import pick from 'lodash/pick'
 import { GetStaticPropsContext } from 'next'
 import Root from 'components/Layout/Root'
 import Image from 'next/image'
-import { useTranslations } from 'next-intl'
+import { createTranslator, useTranslations } from 'next-intl'
 import { FeaturedPosts } from 'components/Blocks/FeaturedPosts'
 import { getPostBySlug } from 'lib/blog'
 import { NextSeo } from 'next-seo'
 
+import { generateImage } from 'lib/og-generator'
+
 export type Props = {
   featuredPosts: any[]
+  ogImage: string
 }
 
 function HomePage(props: Props) {
@@ -22,13 +25,7 @@ function HomePage(props: Props) {
           description: tog('home.subtitle'),
           images: [
             {
-              url: `${
-                process.env.VERCEL_URL
-                  ? 'https://' + process.env.VERCEL_URL
-                  : ''
-              }/api/og?title=${tog('home.title')}&subtitle=${tog(
-                'home.subtitle'
-              )}&image=/avatar-hello.png`,
+              url: props.ogImage,
               width: 1200,
               height: 630,
               alt: 'Marcos Bérgamo memoji smiling',
@@ -69,6 +66,7 @@ export default HomePage
 HomePage.messages = ['Home', 'Post', ...Root.messages]
 
 export async function getStaticProps({ locale }: GetStaticPropsContext) {
+  const tMessages = await import(`../messages/${locale}.json`)
   const featuredParams = [
     'date',
     'slug',
@@ -91,13 +89,31 @@ export async function getStaticProps({ locale }: GetStaticPropsContext) {
     ),
     getPostBySlug('uma-visao-sobre-nosql', featuredParams),
   ]
+
+  const t = createTranslator({
+    messages: tMessages,
+    locale: locale || 'en-US',
+    namespace: 'SocialImage',
+  })
+
+  const ogImage = await generateImage({
+    data: {
+      title: t('home.title'),
+      subtitle: t('home.subtitle'),
+      imagePath: 'avatar-hello.png',
+    },
+    outputName: 'home',
+    options: {
+      width: 1200,
+      height: 630,
+    },
+  })
+
   return {
     props: {
       featuredPosts,
-      messages: pick(
-        await import(`../messages/${locale}.json`),
-        HomePage.messages
-      ),
+      ogImage,
+      messages: pick(tMessages, HomePage.messages),
     },
   }
 }

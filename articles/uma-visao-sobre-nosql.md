@@ -1,6 +1,6 @@
 ---
 title: Uma visão sobre NoSQL
-description: Quando ouvi pela primeira vez o termo NoSQL, imaginei logo “Não SQL??” e os questionamentos vieram tão rápido quanto esse pensamento “Como assim não usar SQL não faz sentido algum isso”, “Não é possível usar um Banco de Dados não relacional” entre outros. Está foi a minha visão sobre o tema. Este blog post foi originalmente postado no meu antigo blog que não está mais disponível na internet em 2014. Muita coisa mudou desde então..
+description: Este blog post foi originalmente postado no meu antigo blog que não está mais disponível na internet em 2014. Muita coisa mudou desde então
 date: '2014-07-12'
 tags: nosql, opinion, pt-br
 lang: pt-BR

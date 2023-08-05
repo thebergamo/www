@@ -1,6 +1,6 @@
 ---
 title: Precisamos falar sobre os novos desevolvedores!
-description: Começar em um emprego novo é sempre uma experiência com diversos aprendizados, neste post gostaria de compartilhar um pouco do meu sentimento sobre essa nova vivência
+description: Começar um emprego novo é sempre uma experiência cheia de aprendizados, gostaria de compartilhar o meu sentimento sobre essa nova vivência
 date: '2016-02-10'
 tags: development, engineering, opinion, pt-br
 lang: pt-BR

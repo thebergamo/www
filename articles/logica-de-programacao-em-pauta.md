@@ -1,6 +1,6 @@
 ---
 title: Lógica de Programação em pauta
-description: Uma das primeiras aventuras que temos quando estamos iniciando no universo da programação é a famosa "Lógica de Programação", neste post eu compartilho minha humilde opinião sobre este tópico tão importante
+description: Uma das primeiras aventuras que temos quando estamos iniciando no universo da programação é a famosa "Lógica de Programação"
 date: '2016-12-14'
 tags: beginners, computer-science, pt-br
 lang: pt-BR

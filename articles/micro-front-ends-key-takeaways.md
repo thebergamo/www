@@ -1,6 +1,6 @@
 ---
 title: Micro Front-Ends Key Takeaways
-description: Micro-Frontends are not a new trend anymore, but a reality and many companies are investing a lot on it. In this post I would like to share about my experience building my own Micro-Frontend server and helo you to build a reasonable understanding of the key concepts in MFE to decide the build or buy dilemma.
+description: Micro-Frontends are not a new trend anymore, but a reality. In this post I will to share about my experience building my own framework.
 date: '2022-12-01'
 tags: architecture, front-end, en-us, talks, micro-frontends
 lang: en-US
