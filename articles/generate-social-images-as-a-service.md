@@ -1,6 +1,6 @@
 ---
 title: Generate social images as a service
-description: "Automate social image generation is a real part of our work in some areas. Plenty of SaaS there which we could use, but not all the time they're that affordable. If you had a simple use case like mine, you may find this post a good start point to build your solution in a cost effective way."
+description: 'Automate social image generation is a real part of our work in some areas. If you had a simple use case, you may find this post a good start'
 image: /static/img/posts/generate-socials/phone-cover.jpg
 lang: en-US
 date: '2021-07-21'

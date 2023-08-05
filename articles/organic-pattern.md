@@ -1,6 +1,6 @@
 ---
 title: Organic Pattern
-description: This is my first draft as a proposal for the creation of a pattern of development for the applications of this new Cloud generation that is emerging.
+description: This is my 1st draft as a proposal for creation of a pattern of development for applications of this new Cloud generation that is emerging.
 date: '2014-12-04'
 tags: design-patterns, development, en-us, engineering
 lang: en-US

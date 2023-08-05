@@ -1,6 +1,6 @@
 ---
 title: Quando novos desenvolvedores chegam
-description: Devida a repercução do meu ultimo post relacioando sobre a organização das empresas antes de contratar novos desenvolvedores e como estes são recebidos. Neste post dedico a algumas opniões que eu particularmente gostaria de receber quando começar em um novo emprego
+description: Neste post dedico a algumas opniões que eu particularmente gostaria de receber quando começar em um novo emprego
 date: '2016-02-10'
 tags: development, engineering, opinion, pt-br
 lang: pt-BR

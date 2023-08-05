@@ -46,5 +46,20 @@
   },
   "Contact": {
     "title": "Contact"
+  },
+  "SocialImage": {
+    "siteTitle": "thedon.com.br",
+    "home": {
+      "title": "Marcos Bérgamo's website",
+      "subtitle": "Senior Software Engineer and Architect"
+    },
+    "about": {
+      "title": "My name is Marcos Bérgamo",
+      "subtitle": "Nice to meet you!"
+    },
+    "blog": {
+      "title": "Learn, Practice and Share",
+      "subtitle": "This is the place where I share my thoughs and my learnings in public"
+    }
   }
 }

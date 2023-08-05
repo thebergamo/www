@@ -46,5 +46,20 @@
   },
   "Contact": {
     "title": "Contato"
+  },
+  "SocialImage": {
+    "siteTitle": "thedon.com.br",
+    "home": {
+      "title": "Marcos Bérgamo website",
+      "subtitle": "Engenheiro de Software Senior e Arquiteto"
+    },
+    "about": {
+      "title": "Meu nome é Marcos Bérgamo",
+      "subtitle": "Prazer em te conhecer!"
+    },
+    "blog": {
+      "title": "Aprender, Praticar e Compartilhar",
+      "subtitle": "Aqui é o lugar onde eu compartilho minhas ideias e meus aprendizados em público"
+    }
   }
 }

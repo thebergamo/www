@@ -1,16 +1,19 @@
 import PostLayout from 'components/Layout/PostLayout'
 import Root from 'components/Layout/Root'
 import { convertMarkdownToHtml, getAllPosts, getPostBySlug } from 'lib/blog'
+import { generateImage } from 'lib/og-generator'
 import pick from 'lodash/pick'
 import { GetStaticPropsContext } from 'next'
 import { useTranslations } from 'next-intl'
+import { NextSeo } from 'next-seo'
 
 export type Props = {
   errorCode?: number
   post: any
+  ogImage: string
 }
 
-function BlogPage({ post, errorCode }: Props) {
+function BlogPage({ post, errorCode, ogImage }: Props) {
   const t = useTranslations('Post')
   if (errorCode) {
     return (
@@ -19,9 +22,33 @@ function BlogPage({ post, errorCode }: Props) {
       </>
     )
   }
-
   return (
     <>
+      <NextSeo
+        title={post.title}
+        description={post.description}
+        canonical={`https://www.thedon.com.br/blog/${post.slug}`}
+        openGraph={{
+          title: post.title,
+          description: post.description,
+          url: `https://www.thedon.com.br/blog/${post.slug}`,
+          type: 'article',
+          article: {
+            tags: post.tags.split(','),
+            publishedTime: post.date,
+            modifiedTime: post.date,
+          },
+          images: [
+            {
+              url: ogImage,
+              width: 1200,
+              height: 630,
+              alt: 'Marcos Bérgamo memoji smiling',
+              type: 'image/png',
+            },
+          ],
+        }}
+      />
       <aside className="bg-orange-300 rounded-lg p-4 text-lg">
         <div className="flex flex-row">
           <p className="text-2xl p-2 mx-2">🔄</p>
@@ -51,8 +78,10 @@ export async function getStaticProps({
   locale,
   params,
 }: GetStaticPropsContext) {
+  const tMessages = await import(`../../messages/${locale}.json`)
   let post = null
   let errorCode = null
+  let ogImage = ''
 
   try {
     const slug = (params?.slug ?? '') as string
@@ -62,6 +91,7 @@ export async function getStaticProps({
       'date',
       'description',
       'image',
+      'tags',
       'image_credit',
       'image_alt',
       'lang',
@@ -72,6 +102,21 @@ export async function getStaticProps({
 
     post.content = await convertMarkdownToHtml(post.content)
     post.image_credit = await convertMarkdownToHtml(post.image_credit)
+
+    ogImage = await generateImage({
+      data: {
+        title: post.title,
+        subtitle: post.description,
+        imagePath: post.image,
+        translate: false,
+        locale,
+      },
+      outputName: `${locale}_${post.slug}`,
+      options: {
+        width: 1200,
+        height: 630,
+      },
+    })
   } catch (err) {
     errorCode = 404
   }
@@ -80,10 +125,8 @@ export async function getStaticProps({
     props: {
       post,
       errorCode,
-      messages: pick(
-        await import(`../../messages/${locale}.json`),
-        BlogPage.messages
-      ),
+      ogImage,
+      messages: pick(tMessages, BlogPage.messages),
     },
   }
 }

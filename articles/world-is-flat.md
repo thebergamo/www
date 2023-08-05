@@ -1,6 +1,6 @@
 ---
 title: World is flat
-description: A terra não é plana, mas digitalmente o conceito do flat design é algo que eu realmente acho incrivel e resolvi escrever um pouco sobre as minhas opiniões nesse conceito
+description: A terra não é plana, mas digitalmente o conceito do flat design é algo que eu realmente acho incrivel e resolvi escrever um pouco sobre isso
 date: '2014-10-12'
 tags: development, opinion, pt-br, ui/ux
 lang: pt-BR
