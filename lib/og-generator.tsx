@@ -47,14 +47,11 @@ export async function generateImage({
     // in case of error file doesn't exist
   }
 
-  console.log('no image found in cache.. proceed generating')
-
   if (!template && !data) {
     throw new SyntaxError(
       'Missing data to generate OG image or Template itself'
     )
   }
-  console.log('data to be run')
 
   let og = template
 
@@ -64,7 +61,6 @@ export async function generateImage({
       join(process.cwd(), publicPath, data.imagePath),
       { encoding: 'base64' }
     ).catch(console.error)
-    console.log('image loaded')
     og = (
       <OgTemplate
         title={data.title}
@@ -76,7 +72,6 @@ export async function generateImage({
 
   const interFont = await readFile(interPath)
 
-  console.log('run satori')
   const svg = await satori(og, {
     width: options.width,
     height: options.height,
@@ -89,11 +84,10 @@ export async function generateImage({
       },
     ],
   })
-  console.log('satori done', svg)
+
   const resvg = new Resvg(svg)
   const pngBuffer = resvg.render().asPng()
 
-  console.log('just write file')
   await writeFile(pngPath, pngBuffer)
 
   return relativePath
