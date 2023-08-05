@@ -5,13 +5,20 @@ import { writeFile, readFile, stat } from 'fs/promises'
 import { join } from 'path'
 import { OgTemplate } from 'components/OpenGraph/OgTemplate'
 import mimeType from 'mime-types'
+import { createTranslator } from 'next-intl'
 
 type ImageOptions = {
   width: number
   height: number
 }
 
-type TemplateOptions = { title: string; subtitle: string; imagePath: string }
+type TemplateOptions = {
+  title: string
+  subtitle: string
+  imagePath: string
+  translate: boolean
+  locale?: string
+}
 
 type Options = {
   data?: TemplateOptions
@@ -26,6 +33,15 @@ const interPath = join(
   fontPath,
   'Inter/static/Inter-Regular.ttf'
 )
+
+async function getTranslator(locale: string = 'en-US') {
+  const tMessages = await import(`../messages/${locale}.json`)
+  return createTranslator({
+    messages: tMessages,
+    locale: locale || 'en-US',
+    namespace: 'SocialImage',
+  })
+}
 
 export async function generateImage({
   data,
@@ -61,13 +77,27 @@ export async function generateImage({
       join(process.cwd(), publicPath, data.imagePath),
       { encoding: 'base64' }
     ).catch(console.error)
-    og = (
-      <OgTemplate
-        title={data.title}
-        subtitle={data.subtitle}
-        image={`data:${imageType};base64,${imageData}`}
-      />
-    )
+
+    if (data.translate) {
+      const t = await getTranslator(data.locale)
+      og = (
+        <OgTemplate
+          //@ts-ignore-next-line
+          title={t(data.title)}
+          //@ts-ignore-next-line
+          subtitle={t(data.subtitle)}
+          image={`data:${imageType};base64,${imageData}`}
+        />
+      )
+    } else {
+      og = (
+        <OgTemplate
+          title={data.title}
+          subtitle={data.subtitle}
+          image={`data:${imageType};base64,${imageData}`}
+        />
+      )
+    }
   }
 
   const interFont = await readFile(interPath)

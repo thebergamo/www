@@ -108,8 +108,10 @@ export async function getStaticProps({
         title: post.title,
         subtitle: post.description,
         imagePath: post.image,
+        translate: false,
+        locale,
       },
-      outputName: post.slug,
+      outputName: `${locale}_${post.slug}`,
       options: {
         width: 1200,
         height: 630,

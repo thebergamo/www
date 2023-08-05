@@ -2,7 +2,7 @@ import pick from 'lodash/pick'
 import { GetStaticPropsContext } from 'next'
 import Root from 'components/Layout/Root'
 import Image from 'next/image'
-import { createTranslator, useTranslations } from 'next-intl'
+import { useTranslations } from 'next-intl'
 import { FeaturedPosts } from 'components/Blocks/FeaturedPosts'
 import { getPostBySlug } from 'lib/blog'
 import { NextSeo } from 'next-seo'
@@ -90,19 +90,15 @@ export async function getStaticProps({ locale }: GetStaticPropsContext) {
     getPostBySlug('uma-visao-sobre-nosql', featuredParams),
   ]
 
-  const t = createTranslator({
-    messages: tMessages,
-    locale: locale || 'en-US',
-    namespace: 'SocialImage',
-  })
-
   const ogImage = await generateImage({
     data: {
-      title: t('home.title'),
-      subtitle: t('home.subtitle'),
+      title: 'home.title',
+      subtitle: 'home.subtitle',
       imagePath: 'avatar-hello.png',
+      translate: true,
+      locale,
     },
-    outputName: 'home',
+    outputName: `${locale}_home`,
     options: {
       width: 1200,
       height: 630,

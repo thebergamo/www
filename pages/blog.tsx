@@ -2,7 +2,7 @@ import pick from 'lodash/pick'
 import { GetStaticPropsContext } from 'next'
 import Root from 'components/Layout/Root'
 import Image from 'next/image'
-import { createTranslator, useTranslations } from 'next-intl'
+import { useTranslations } from 'next-intl'
 import { FeaturedPosts } from 'components/Blocks/FeaturedPosts'
 import { getAllPosts, getPostBySlug } from 'lib/blog'
 import { PostList } from 'components/Blocks/PostList'
@@ -99,19 +99,15 @@ export async function getStaticProps({ locale }: GetStaticPropsContext) {
     'content',
   ])
 
-  const t = createTranslator({
-    messages: tMessages,
-    locale: locale || 'en-US',
-    namespace: 'SocialImage',
-  })
-
   const ogImage = await generateImage({
     data: {
-      title: t('blog.title'),
-      subtitle: t('blog.subtitle'),
+      title: 'blog.title',
+      subtitle: 'blog.subtitle',
       imagePath: 'avatar.png',
+      translate: true,
+      locale,
     },
-    outputName: 'blog',
+    outputName: `${locale}_blog`,
     options: {
       width: 1200,
       height: 630,

@@ -1,7 +1,7 @@
 import pick from 'lodash/pick'
 import { GetStaticPropsContext } from 'next'
 import Root from 'components/Layout/Root'
-import { createTranslator, useTranslations } from 'next-intl'
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import { NextSeo } from 'next-seo'
 import { generateImage } from 'lib/og-generator'
@@ -120,19 +120,15 @@ AboutPage.messages = ['About', ...Root.messages]
 export async function getStaticProps({ locale }: GetStaticPropsContext) {
   const tMessages = await import(`../messages/${locale}.json`)
 
-  const t = createTranslator({
-    messages: tMessages,
-    locale: locale || 'en-US',
-    namespace: 'SocialImage',
-  })
-
   const ogImage = await generateImage({
     data: {
-      title: t('about.title'),
-      subtitle: t('about.subtitle'),
+      title: 'about.title',
+      subtitle: 'about.subtitle',
       imagePath: 'avatar-contact.png',
+      translate: true,
+      locale,
     },
-    outputName: 'about',
+    outputName: `${locale}_about`,
     options: {
       width: 1200,
       height: 630,
