@@ -41,11 +41,11 @@ export const PostHeader: React.FC<{
       )}
 
       <div className="flex justify-center lg:text-2xl mb-8 mt-12 z-30">
-        <div className="flex items-center  text-gray-800 dark:text-gray-200 capsize mr-8">
+        <div className="flex items-center  text-zinc-800 dark:text-zinc-200 capsize mr-8">
           <Calendar />
           <span className="ml-2 align-baseline capsize">{date}</span>
         </div>
-        <div className="flex items-center text-gray-800 dark:text-gray-200 capsize">
+        <div className="flex items-center text-zinc-800 dark:text-zinc-200 capsize">
           <Clock />
           <span className="ml-2 align-baseline capsize capitalize">
             {t('readingTime', { time: Math.ceil(stats.minutes) })}

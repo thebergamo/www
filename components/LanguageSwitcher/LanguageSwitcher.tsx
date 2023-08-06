@@ -27,7 +27,7 @@ export const LanguageSwitcher: React.FC = () => {
   return (
     <Popover>
       <div
-        aria-label="Toggle Language"
+        title="Toggle Language"
         className="w-9 h-9 bg-gray-200 rounded-lg dark:bg-gray-600 flex items-center justify-center  hover:ring-2 ring-gray-300  transition-all"
       >
         <PopoverTrigger asChild>
@@ -42,10 +42,11 @@ export const LanguageSwitcher: React.FC = () => {
                 key={l}
                 href={asPath}
                 locale={l}
+                hrefLang={l}
                 className={classNames(
                   locale === l
-                    ? 'font-semibold text-gray-900 dark:text-gray-200 bg-gray-200 dark:bg-gray-700'
-                    : 'font-normal text-gray-600 dark:text-gray-400',
+                    ? 'font-semibold text-zinc-900 dark:text-zinc-200 bg-gray-200 dark:bg-gray-700'
+                    : 'font-normal text-zinc-600 dark:text-zinc-400',
                   '-m-3 flex items-center rounded-lg p-3 mb-4 last:mb-0 hover:bg-gray-300 dark:hover:bg-gray-800'
                 )}
               >

@@ -5,6 +5,7 @@
     "*.yaml",
     "*.json",
     "**/*.md",
+    "**/*.css",
     "public/**/*.*"
   ],
   "overrides": [

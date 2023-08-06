@@ -9,7 +9,7 @@ type ExternalLinkProps = {
 }
 const ExternalLink = ({ href, text }: ExternalLinkProps) => (
   <a
-    className="text-gray-500 hover:underline dark:hover:text-gray-200 transition"
+    className="text-zinc-400 hover:underline dark:hover:text-zinc-200 transition"
     target="_blank"
     rel="noopener noreferrer"
     href={href}
@@ -25,7 +25,7 @@ export default function Social() {
         <Link
           key={link}
           href={link}
-          className="text-gray-500 hover:underline dark:hover:text-gray-200 transition"
+          className="text-zinc-400 hover:underline dark:hover:text-zinc-200 transition"
         >
           {title}
         </Link>

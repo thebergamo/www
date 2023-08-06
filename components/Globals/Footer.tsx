@@ -18,7 +18,7 @@ export default function Footer() {
             <Link
               key={link}
               href={link}
-              className="text-gray-500 hover:underline dark:hover:text-gray-200 transition"
+              className="text-zinc-400 hover:underline dark:hover:text-zinc-200 transition"
             >
               {t(title)}
             </Link>
@@ -27,7 +27,7 @@ export default function Footer() {
         <Social />
       </div>
       <div className="text-center w-full pb-6">
-        <p className="text-gray-300">
+        <p className="text-zinc-300">
           © Copyright {currentYear} - Marcos Bérgamo
         </p>
       </div>

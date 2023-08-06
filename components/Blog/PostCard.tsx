@@ -49,17 +49,19 @@ export default function BlogPostCard({
           priority
         />
         <div className="flex flex-col justify-between">
-          <h3 className="text-lg md:text-lg font-medium w-full text-gray-900 dark:text-gray-100 tracking-tight">
+          <h3 className="text-lg md:text-lg font-medium w-full text-zinc-900 dark:text-zinc-100 tracking-tight">
             {title}
           </h3>
-          <span className="mb-2 sm:mb-6 line-clamp-4">{description}</span>
+          <span className="mb-2 sm:mb-6 line-clamp-4 dark:text-zinc-400 text-zinc-700">
+            {description}
+          </span>
         </div>
         <div className="flex justify-between">
-          <div className="flex items-center text-gray-800 dark:text-gray-200 capsize">
+          <div className="flex items-center text-zinc-800 dark:text-zinc-200 capsize">
             <Calendar />
             <span className="ml-2 align-baseline capsize">{date}</span>
           </div>
-          <div className="flex items-center text-gray-800 dark:text-gray-200 capsize">
+          <div className="flex items-center text-zinc-800 dark:text-zinc-200 capsize">
             <Clock />
             <span className="ml-2 align-baseline capsize capitalize">
               {t('readingTime', { time: Math.ceil(stats.minutes) })}
