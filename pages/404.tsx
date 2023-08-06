@@ -19,10 +19,10 @@ function NotFoundPage() {
         </div>
         <div className="flex flex-col">
           <h1>{t('title')}</h1>
-          <p className="text-gray-700 dark:text-gray-200 text-2xl mb-4 mt-6">
+          <p className="text-zinc-700 dark:text-zinc-200 text-2xl mb-4 mt-6">
             {t('missing')}
           </p>
-          <p className="text-gray-700 dark:text-gray-200 text-2xl mb-4">
+          <p className="text-zinc-700 dark:text-zinc-200 text-2xl mb-4">
             {t('suggestion')}
           </p>
         </div>

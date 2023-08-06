@@ -49,7 +49,7 @@ function BlogPage(props: Props) {
             <h1 className="text-transparent bg-clip-text bg-gradient-to-r from-[#6EE7B7] via-[#3B82F6] to-[#9333EA]">
               {t('title')}
             </h1>
-            <h2 className="text-gray-700 dark:text-gray-200 text-lg mb-4">
+            <h2 className="text-zinc-700 dark:text-zinc-200 text-lg mb-4">
               {t('subtitle')}
             </h2>
           </div>

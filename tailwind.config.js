@@ -35,7 +35,7 @@ module.exports = {
       typography: (theme) => ({
         DEFAULT: {
           css: {
-            color: theme('colors.gray.700'),
+            color: theme('colors.zinc.700'),
             a: {
               color: theme('colors.blue.500'),
               '&:hover': {
@@ -47,7 +47,7 @@ module.exports = {
               'scroll-margin-top': spacing[32],
             },
             thead: {
-              borderBottomColor: theme('colors.gray.200'),
+              borderBottomColor: theme('colors.zinc.200'),
             },
             code: { color: theme('colors.pink.500') },
             'blockquote p:first-of-type::before': false,
@@ -56,7 +56,7 @@ module.exports = {
         },
         dark: {
           css: {
-            color: theme('colors.gray.200'),
+            color: theme('colors.zinc.200'),
             a: {
               color: theme('colors.blue.400'),
               '&:hover': {
@@ -65,34 +65,34 @@ module.exports = {
               code: { color: theme('colors.blue.400') },
             },
             blockquote: {
-              borderLeftColor: theme('colors.gray.700'),
-              color: theme('colors.gray.300'),
+              borderLeftColor: theme('colors.zinc.700'),
+              color: theme('colors.zinc.300'),
             },
             'h2,h3,h4': {
-              color: theme('colors.gray.100'),
+              color: theme('colors.zinc.100'),
               'scroll-margin-top': spacing[32],
             },
             hr: { borderColor: theme('colors.gray.700') },
             ol: {
               li: {
-                '&:before': { color: theme('colors.gray.500') },
+                '&:before': { color: theme('colors.zinc.500') },
               },
             },
             ul: {
               li: {
-                '&:before': { backgroundColor: theme('colors.gray.500') },
+                '&:before': { backgroundColor: theme('colors.zinc.500') },
               },
             },
-            strong: { color: theme('colors.gray.100') },
+            strong: { color: theme('colors.zinc.100') },
             thead: {
               th: {
-                color: theme('colors.gray.100'),
+                color: theme('colors.zinc.100'),
               },
-              borderBottomColor: theme('colors.gray.600'),
+              borderBottomColor: theme('colors.zinc.600'),
             },
             tbody: {
               tr: {
-                borderBottomColor: theme('colors.gray.700'),
+                borderBottomColor: theme('colors.zinc.700'),
               },
             },
           },

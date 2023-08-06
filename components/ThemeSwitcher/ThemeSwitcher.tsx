@@ -21,7 +21,7 @@ export const ThemeSwitcher: React.FC = () => {
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
-          className="w-5 h-5 text-gray-800 dark:text-gray-200"
+          className="w-5 h-5 text-zinc-800 dark:text-zinc-200"
         >
           {resolvedTheme === 'dark' ? (
             <path

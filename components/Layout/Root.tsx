@@ -12,10 +12,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
     <>
       <NextSeo themeColor={themeColor} />
       <div className="bg-gray-50 dark:bg-gray-900">
-        <main
-          id="skip"
-          className="flex flex-col justify-center px-8 bg-gray-50  dark:bg-gray-900"
-        >
+        <main id="skip" className="flex flex-col justify-center px-8">
           <Header />
           <div className="flex flex-col justify-center items-start self-center max-w-4xl pb-16">
             {children}

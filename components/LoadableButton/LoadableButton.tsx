@@ -18,7 +18,7 @@ export const LoadableButton: React.FC<PropsWithChildren<Props>> = ({
   return (
     <button
       type={type}
-      className="group relative flex w-full justify-center rounded-md border border-transparent bg-gray-600 dark:bg-gray-50 py-2 px-4 font-medium text-white dark:text-gray-500 hover:bg-gray-700 dark:hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 disabled:cursor-progress disabled:bg-indigo-300"
+      className="group relative flex w-full justify-center rounded-md border border-transparent bg-gray-600 dark:bg-gray-50 py-2 px-4 font-medium text-white dark:text-zinc-400 hover:bg-gray-700 dark:hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 disabled:cursor-progress disabled:bg-indigo-300"
       onClick={onClick}
       disabled={isLoading}
     >

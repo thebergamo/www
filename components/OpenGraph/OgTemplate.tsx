@@ -28,13 +28,13 @@ export function OgTemplate({
             tw="border-2 border-white rounded-full"
           />
         </div>
-        <div tw="mt-3 flex text-5xl leading-normal text-gray-200 justify-center">
+        <div tw="mt-3 flex text-5xl leading-normal text-zinc-200 justify-center">
           {title}
         </div>
-        <div tw="mt-3 mb-2 flex text-3xl text-gray-300 justify-center">
+        <div tw="mt-3 mb-2 flex text-3xl text-zinc-300 justify-center">
           {subtitle.slice(0, 140)}
         </div>
-        <div tw="mt-5 flex items-center text-xl text-gray-300 justify-center">
+        <div tw="mt-5 flex items-center text-xl text-zinc-300 justify-center">
           <div>{siteTitle}</div>
           <div tw="-mt-2 ml-3">.</div>
           <div tw="ml-3">{`© Copyright ${new Date().getFullYear()} - Marcos Bérgamo`}</div>

@@ -15,7 +15,7 @@ export const SearchBox: React.FC = () => {
   return (
     <Popover>
       <div
-        aria-label="Toggle Search Box"
+        title="Toggle Search Box"
         className="w-9 h-9 bg-gray-200 rounded-lg dark:bg-gray-600 flex items-center justify-center  hover:ring-2 ring-gray-300  transition-all"
       >
         <PopoverTrigger asChild>
@@ -31,10 +31,10 @@ export const SearchBox: React.FC = () => {
                 type="text"
                 onChange={(e) => setSearchValue(e.target.value)}
                 placeholder="Search anything"
-                className="block w-full px-4 py-2 text-gray-900 bg-white border border-gray-200 rounded-md dark:border-gray-900 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:text-gray-100"
+                className="block w-full px-4 py-2 text-zinc-900 bg-white border border-gray-200 rounded-md dark:border-gray-900 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:text-zinc-100"
               />
               <svg
-                className="absolute w-5 h-5 text-gray-400 right-3 top-3 dark:text-gray-300"
+                className="absolute w-5 h-5 text-zinc-400 right-3 top-3 dark:text-zinc-300"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -56,11 +56,11 @@ export const SearchBox: React.FC = () => {
               {data && (
                 <div className="px-2">
                   <div>
-                    <p className="dark:text-gray-100 font-bold my-2">Posts</p>
+                    <p className="dark:text-zinc-100 font-bold my-2">Posts</p>
                     {data?.posts.map(({ title, slug }) => (
                       <Link
                         href={`/blog/${slug}`}
-                        className="dark:text-gray-100 text-gray-600 hover:underline"
+                        className="dark:text-zinc-100 text-zinc-600 hover:underline"
                         key={slug}
                       >
                         {title}

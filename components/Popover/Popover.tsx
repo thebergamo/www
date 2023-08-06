@@ -9,7 +9,7 @@ export const PopoverContent: React.FC<
   return (
     <PopoverPrimitive.Content {...props} className="mt-3">
       <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
-        <div className="relative grid gap-6 bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 px-5 py-6 sm:gap-8 sm:p-8">
+        <div className="relative grid gap-6 bg-gray-100 dark:bg-gray-800 text-zinc-600 dark:text-zinc-400 px-5 py-6 sm:gap-8 sm:p-8">
           {children}
         </div>
       </div>

@@ -46,11 +46,11 @@ function HomePage(props: Props) {
           </div>
           <div className="flex flex-col">
             <h1>{t('greeting')}</h1>
-            <h2 className="text-gray-700 dark:text-gray-200 text-lg mb-4">
+            <h2 className="text-zinc-700 dark:text-zinc-200 text-lg mb-4">
               {t('work-title')}
               <span className="font-semibold">{t('company')}</span>
             </h2>
-            <p className="text-gray-600 dark:text-gray-400 max-w-lg">
+            <p className="text-zinc-600 dark:text-zinc-400 max-w-lg">
               {t('description')}
             </p>
           </div>
