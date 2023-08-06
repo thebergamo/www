@@ -4,6 +4,7 @@ import { Calendar } from 'components/Icons/Calendar'
 import readingTime from 'reading-time'
 import { useTranslations } from 'next-intl'
 import { Clock } from 'components/Icons/Clock'
+import Image from 'next/image'
 
 export type Post = {
   date: string
@@ -39,14 +40,18 @@ export default function BlogPostCard({
       )}
     >
       <div className="flex flex-col justify-between h-full bg-white dark:bg-gray-900 rounded-lg p-4">
-        <span
-          className="bg-cover bg-center w-full h-36"
-          style={{ backgroundImage: `url(${image})` }}
+        <Image
+          src={image}
+          height={144}
+          width={286}
+          className="w-full h-36 object-cover object-center"
+          alt={`Cover image of post ${title}`}
+          priority
         />
         <div className="flex flex-col justify-between">
-          <h4 className="text-lg md:text-lg font-medium w-full text-gray-900 dark:text-gray-100 tracking-tight">
+          <h3 className="text-lg md:text-lg font-medium w-full text-gray-900 dark:text-gray-100 tracking-tight">
             {title}
-          </h4>
+          </h3>
           <span className="mb-2 sm:mb-6 line-clamp-4">{description}</span>
         </div>
         <div className="flex justify-between">
