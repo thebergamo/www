@@ -23,9 +23,9 @@ export default function BlogPost({
     <Link href={`/blog/${slug}`} className="w-full">
       <div className="w-full mb-8">
         <div className="flex flex-col justify-between md:flex-row">
-          <h4 className="lg:w-2/3 mb-2 text-lg font-medium text-zinc-900 md:text-xl dark:text-zinc-100">
+          <h3 className="lg:w-2/3 mb-2 text-lg font-medium text-zinc-900 md:text-xl dark:text-zinc-100">
             {title}
-          </h4>
+          </h3>
           <div className="flex justify-between lg:w-1/3">
             <div className="flex items-center text-zinc-800 dark:text-zinc-200 capsize">
               <Calendar />
