@@ -4,25 +4,20 @@ import RSS from 'rss'
 /* @ts-ignore */
 export async function getServerSideProps({ res }) {
   const feed = new RSS({
-    title: 'Marcos Bérgamo',
+    title: 'Marcos Bérgamo Feed',
     site_url: 'https://thedon.com.br',
     feed_url: 'https://thedon.com.br/feed.xml',
+    language: 'en-US',
   })
 
-  const posts = getAllPosts([
-    'slug',
-    'title',
-    'url',
-    'publishedDate',
-    'description',
-  ])
-  /* @ts-ignore */
-  posts.docs.forEach((post) => {
+  const posts = getAllPosts(['slug', 'title', 'url', 'date', 'description'])
+
+  posts.forEach((post) => {
     feed.item({
       title: post.title,
       url: `https://thedon.com.br/blog/${post.slug}`,
-      date: post.publishedDate,
-      description: post.excerpt,
+      date: post.date,
+      description: post.description,
     })
   })
 
