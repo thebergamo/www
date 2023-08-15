@@ -49,19 +49,21 @@ function BlogPage({ post, errorCode, ogImage }: Props) {
           ],
         }}
       />
-      <aside className="bg-orange-300 rounded-lg p-4 text-lg">
-        <div className="flex flex-row">
-          <p className="text-2xl p-2 mx-2">🔄</p>
-          <p>
-            {t('disclaimer')}
-            <a className="underline" href={post.original_post}>
-              {t('original')}.
-            </a>
-            <br />
-            {t('reason')}
-          </p>
-        </div>
-      </aside>
+      {post.original_post && (
+        <aside className="bg-orange-300 rounded-lg p-4 text-lg">
+          <div className="flex flex-row">
+            <p className="text-2xl p-2 mx-2">🔄</p>
+            <p>
+              {t('disclaimer')}
+              <a className="underline" href={post.original_post}>
+                {t('original')}.
+              </a>
+              <br />
+              {t('reason')}
+            </p>
+          </div>
+        </aside>
+      )}
       <span
         className="prose dark:prose-invert max-w-prose"
         dangerouslySetInnerHTML={{ __html: post.content }}
@@ -106,7 +108,7 @@ export async function getStaticProps({
     ogImage = await generateImage({
       data: {
         title: post.title,
-        subtitle: post.description,
+        subtitle: post.description || '',
         imagePath: post.image,
         translate: false,
         locale,
@@ -118,6 +120,7 @@ export async function getStaticProps({
       },
     })
   } catch (err) {
+    console.error('Error while rendering post', err)
     errorCode = 404
   }
 
