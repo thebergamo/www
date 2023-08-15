@@ -77,6 +77,7 @@ export async function getStaticProps({ locale }: GetStaticPropsContext) {
   ]
   // TODO: have a better way to handle featured posts and limit
   const featuredPosts = [
+    getPostBySlug('create-next-og-image-at-build-time', featuredParams),
     getPostBySlug('micro-front-ends-key-takeaways', featuredParams),
     getPostBySlug('generate-social-images-as-a-service', featuredParams),
     getPostBySlug(
