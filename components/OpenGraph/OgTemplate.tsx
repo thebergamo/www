@@ -19,8 +19,8 @@ export function OgTemplate({
           'linear-gradient(133deg, rgb(110, 231, 183) 0%, rgb(59, 130, 246) 45%, rgb(147, 51, 234) 100%)',
       }}
     >
-      <div tw="rounded p-10 bg-zinc-900 h-full w-full flex flex-col">
-        <div tw="mt-10 flex items-center justify-center">
+      <div tw="rounded px-10 bg-zinc-900 h-full w-full flex flex-col">
+        <div tw="mt-8 flex items-center justify-center">
           <img
             width="240"
             height="240"
