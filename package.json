@@ -57,6 +57,7 @@
     "@types/escape-html": "^1.0.2",
     "@types/lodash": "^4.14.195",
     "@types/mdast": "^4.0.0",
+    "@types/micromatch": "^4.0.2",
     "@types/mime-types": "^2.1.1",
     "@types/node": "20.4.3",
     "@types/react": "18.2.15",

@@ -10,15 +10,21 @@ import remarkOembed from './rehype-oembed'
 
 export async function parseMarkdownToHTML(content: string): Promise<string> {
   const result = await unified()
+    // @ts-ignore-next-line
     .use(remarkParse)
+    // @ts-ignore-next-line
     .use(remarkGfm)
     .use(remarkOembed)
+    // @ts-ignore-next-line
     .use(remarkRehype)
+    // @ts-ignore-next-line
     .use(rehypeRaw)
+    // @ts-ignore-next-line
     .use(rehypePrettyCode, {
       theme: 'dracula',
     })
     // .use(rehypeSanitize)
+    // @ts-ignore-next-line
     .use(rehypeStringify)
     .process(content)
 
