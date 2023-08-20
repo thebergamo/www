@@ -145,8 +145,6 @@ export async function getStaticPaths() {
     },
   }))
 
-  console.info(paths)
-
   return {
     paths,
     fallback: 'blocking',

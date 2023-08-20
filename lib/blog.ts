@@ -1,9 +1,7 @@
 import fs from 'fs'
 import matter from 'gray-matter'
 import { join } from 'path'
-import { remark } from 'remark'
-import html from 'remark-html'
-import prism from 'remark-prism'
+import { parseMarkdownToHTML } from './markdown-parser'
 
 const postsDirectory = join(process.cwd(), 'articles')
 
@@ -54,9 +52,5 @@ export function searchPosts(term: string) {
 }
 
 export async function convertMarkdownToHtml(markdown: string) {
-  const result = await remark()
-    .use(html, { sanitize: false })
-    .use(prism)
-    .process(markdown)
-  return result.toString()
+  return parseMarkdownToHTML(markdown)
 }

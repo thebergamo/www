@@ -22,7 +22,7 @@ The biggest problem with Bannerbear at least on our current stage is the pricing
 
 Then I started my POC for fun.
 
-# Proof of concept
+## Proof of concept
 
 My initial goal in the POC was basically being able to create a template programmatically and inject variables on it in a way that I could put inside some lambda and push forward.
 
@@ -30,7 +30,7 @@ So the end goal of it would be simply generating an image based on a template an
 
 No deployment needed, storage or next steps(although I've in mind how the architecture in the end would looks like… ⚠️ SPOILER ALERT ⚠️ I will share a bit of mine initial idea of the end to end plan of it).
 
-# Planning phase
+## Planning phase
 
 I had a damn little experience manipulating images, mostly from the time I made my CMS in PHP(which is a shame I lost, so use Git on your project from start) and it was doing some simple manipulations with **[ImageMagic](https://imagemagick.org/index.php)** lib just to reside and store it in the server.
 
@@ -42,11 +42,11 @@ Then before any implementation details I played a bit around how I would like to
 
 After being satisfied with end result, then I moved to the Building phase 😉
 
-# Building phase
+## Building phase
 
 Take a look on how my template is supposed to looks like:
 
-```tsx
+```javascript title="generator.js"
 const template = {
   stage: {
     width: 1080,
@@ -114,13 +114,13 @@ const template = {
 
 Then, let me explain a bit on how this template is supposed to work:
 
-## Stage
+### Stage
 
 Stage property sets as the name suggest the stage for the other changes, like when you're starting a new file in Photoshop or Figma, you need to set your stage before beginning.
 
 So, simple as providing the size and initial background color.
 
-## Layers
+### Layers
 
 This is where the magic begins. Every single component should be a layer, so they're arguably independent.
 
@@ -131,33 +131,33 @@ Those layers have types (described below) and the specific properties from those
 
 </aside>
 
-### Type
+#### Type
 
 I decided to support few simple types of objects inside my image generator, `box`, `background-image`, `image`, `text` and a plan to support some sort of `filter` also, but not today.
 
 So, this property will let me know what kind of strategy I should use to render it.
 
-### Position
+#### Position
 
 This is quite straightforward one, a simple tuple with `[top, left]` absolute values(px). At some point it can be evolved into relative values as well.
 
-### Width/Height
+#### Width/Height
 
 No new concept here, those are exactly as the name suggest, it should define size of our component inside the stage.
 
-### Background
+#### Background
 
 A way to force this layer to have a specific background color. A damn useful in the case of boxes where you want them to have a different background color.
 
-### Color
+#### Color
 
 Exactly like `box`es, but for `text` type more specifically to set the color of the text.
 
-### Input
+#### Input
 
 This would define the name of variable which my generator needs to looks after in the variables object.
 
-```tsx
+```javascript title="generator.js"
 const variables = [
   { name: 'productDescription1', text: 'Cenoura' },
   { name: 'productPrice1', text: 'R$: 12,59' },
@@ -183,7 +183,7 @@ So, this is how my variables looks like and how I would include my custom data t
 
 </aside>
 
-## The generator
+### The generator
 
 So, both of our inputs are in place now we must implement a way to transform this code into something that we could possibility think of post into our socials.
 
@@ -193,7 +193,7 @@ The end result should be something like the image above based on the template.
 
 For brevity I won't post the full code here, but mostly the key takeaways of it, if you would be interested into see this code later on, let me know in the comments.
 
-```tsx
+```javascript title="generator.js"
 // Merge layers with available variables
 function addVariablesToLayers(layers, variables) {}
 
@@ -264,7 +264,7 @@ So, this is how I do render text at this moment, simply wrap a SVG with `rect` a
 
 Basically the SVG and using it to display the text and boxes was the easiest way I found to show such contents at this image, but as I mentioned earlier, I'm more convinced that SVG from scratch should do a nice work here, but today I used only sharp.
 
-```tsx
+```javascript title="generator.js"
 export async function generate(template, modifications) {
   const { stage, layers: rawLayers } = template
   const layers = addVariablesToLayers(rawLayers, modifications)
@@ -301,7 +301,7 @@ export async function generate(template, modifications) {
 
 This as simple as how I got it to work and generate the result you saw above also based on the template showed above.
 
-## Challenges
+### Challenges
 
 **Visual Appeal**
 
@@ -315,7 +315,7 @@ It would enable me to create much more appealing view of those images.
 
 For simple use cases this should be ok doing it, but starting with a real generator that we would need not constant, but changes that can happen often, would be better to build a visual builder for the template, even with simple UI, but at least to help with positioning and sizing (preview also) of the layers of the template would be useful and make our life easier.
 
-# Next steps after the POC?
+## Next steps after the POC?
 
 ![High level architecture of the system](/static/img/posts/generate-socials/Social_Image_generator_as_a_service.png)
 
