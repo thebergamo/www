@@ -59,7 +59,7 @@ export const PostHeader: React.FC<{
 export const PostContent: React.FC<PropsWithChildren> = ({ children }) => {
   return (
     <div className="lg:flex lg:justify-center">
-      <div className="lg:max-w-4xl">{children}</div>
+      <div className="lg:max-w-6xl">{children}</div>
     </div>
   )
 }

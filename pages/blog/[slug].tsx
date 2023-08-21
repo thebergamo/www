@@ -10,10 +10,11 @@ import { NextSeo } from 'next-seo'
 export type Props = {
   errorCode?: number
   post: any
+  toc?: any
   ogImage: string
 }
 
-function BlogPage({ post, errorCode, ogImage }: Props) {
+function BlogPage({ post, errorCode, toc, ogImage }: Props) {
   const t = useTranslations('Post')
   if (errorCode) {
     return (
@@ -68,6 +69,14 @@ function BlogPage({ post, errorCode, ogImage }: Props) {
         className="prose dark:prose-invert max-w-prose"
         dangerouslySetInnerHTML={{ __html: post.content }}
       />
+      {toc && (
+        <nav className="sticky top-6 hidden h-0 xl:!col-start-4 xl:row-start-2 xl:block">
+          <div className="space-y-6">
+            <div className="space-y-2 text-sm">On This Page</div>
+            <div dangerouslySetInnerHTML={{ __html: toc }} />
+          </div>
+        </nav>
+      )}
     </>
   )
 }
@@ -84,6 +93,7 @@ export async function getStaticProps({
   let post = null
   let errorCode = null
   let ogImage = ''
+  let toc = null
 
   try {
     const slug = (params?.slug ?? '') as string
@@ -105,6 +115,7 @@ export async function getStaticProps({
     post.content = await convertMarkdownToHtml(post.content)
     post.image_credit = await convertMarkdownToHtml(post.image_credit)
 
+    console.log({ toc })
     ogImage = await generateImage({
       data: {
         title: post.title,

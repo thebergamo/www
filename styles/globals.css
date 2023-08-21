@@ -141,3 +141,24 @@ table {
 .minArea {
   min-width: 680px;
 }
+
+.container-wrapper {
+  @apply flex justify-between gap-x-6;
+}
+
+.article-wrapper {
+  @apply flex-auto max-w-4xl;
+}
+.container-wrapper nav.toc {
+  @apply sticky top-6 hidden h-0 xl:!col-start-4 xl:row-start-2 xl:block order-last flex-auto;
+}
+
+html[lang='en-US'] .container-wrapper nav.toc::before {
+  content: 'On This Page';
+  @apply text-lg font-semibold text-center;
+}
+
+html[lang='pt-BR'] .container-wrapper nav.toc::before {
+  content: 'Nessa Página';
+  @apply text-lg font-semibold text-center;
+}

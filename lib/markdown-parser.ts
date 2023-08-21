@@ -5,8 +5,12 @@ import remarkRehype from 'remark-rehype'
 import rehypeStringify from 'rehype-stringify'
 import rehypePrettyCode from 'rehype-pretty-code'
 import rehypeRaw from 'rehype-raw'
+import rehypeSlug from 'rehype-slug'
+import rehypeToc from '@jsdevtools/rehype-toc'
+import rehypeAutoLink from 'rehype-autolink-headings'
 
 import remarkOembed from './rehype-oembed'
+import remarkWrapper from './rehype-wrapper'
 
 export async function parseMarkdownToHTML(content: string): Promise<string> {
   const result = await unified()
@@ -18,11 +22,18 @@ export async function parseMarkdownToHTML(content: string): Promise<string> {
     // @ts-ignore-next-line
     .use(remarkRehype)
     // @ts-ignore-next-line
+    .use(rehypeSlug)
+    // @ts-ignore-next-line
+    .use(rehypeAutoLink)
+    // @ts-ignore-next-line
     .use(rehypeRaw)
     // @ts-ignore-next-line
     .use(rehypePrettyCode, {
       theme: 'dracula',
     })
+    // @ts-ignore-next-line
+    .use(rehypeToc, { headings: ['h2', 'h3'] })
+    .use(remarkWrapper)
     // .use(rehypeSanitize)
     // @ts-ignore-next-line
     .use(rehypeStringify)
