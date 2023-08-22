@@ -9,8 +9,8 @@ import rehypeSlug from 'rehype-slug'
 import rehypeToc from '@jsdevtools/rehype-toc'
 import rehypeAutoLink from 'rehype-autolink-headings'
 
-import remarkOembed from './rehype-oembed'
-import remarkWrapper from './rehype-wrapper'
+import remarkOembed from './remark-oembed'
+import remarkWrapper from './remark-wrapper'
 
 export async function parseMarkdownToHTML(content: string): Promise<string> {
   const result = await unified()

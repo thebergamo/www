@@ -4,7 +4,7 @@
 @tailwind utilities;
 
 /* Let's just import the whole gist.css from github: https://github.githubassets.com/assets/gist-embed-8454a1c20ec2.css */
-@import '../lib/rehype-oembed/gist.css';
+@import '../lib/remark-oembed/gist.css';
 
 ::selection {
   background-color: #47a3f3;

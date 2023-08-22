@@ -8,13 +8,13 @@ image: /static/img/posts/break-pipe/cover.jpeg
 original_post: https://medium.com/@thedon/brasil-c62f5d48d15c
 ---
 
-### The Background
+## The Background
 
 No dia de Ontem, descobri uma artimanha bem interessante do _Node.js_, meu aplicativo em produção começou a ficar parado sem motivo ou razão para mim. Chegava em certa parte do _Log_ ele simplesmente parava de funcionar e a partir dai nem com reza brava eu conseguia pegar o problema real da coisa.
 
 Conforme eu incluía mais _logs_ no sistema menos informações apareciam, cheguei a cogitar com a equipe vários possíveis problemas, minha lógica errada, um componente que podia estar com algum _bug_, na real foram algumas horas até conseguir, como diriam meus avós: “Pegar o fio da meada”.
 
-### The Problem
+## The Problem
 
 Acontece que grandes quantidades de _log_ ao usar _Child Process_ do _Node.js_ são um pequeno problema. Na verdade no meu caso acabou sendo um grande problema!
 
@@ -22,7 +22,7 @@ Eu usava o método _Spawn_ da _api Child Process_, até então nos meus testes e
 
 Mas até ai, tudo bem, encheu o _buffer_, não consegue liberar a memoria o processo fica parado, mas o _Node_ vai me retornar algo pra avisar!
 
-### #SQN
+## #SQN
 
 A dor de cabeça foi maior pelo fato do _Node.js_ não me retornar nenhum tipo de _log_ quando esse tipo de situação acontece.
 
@@ -32,7 +32,7 @@ E isso galera, é #foda! mas é #MTOFODA! por que eu realmente não sei o que es
 
 Mas é claro que isso fica muito bem documentado na _API_ de _Child Process_ né não? #SQN!
 
-### The answer
+## The answer
 
 Baseado em um post no _StackOverflow_(eu perdi o link, mas sei a solução abordada lá, quando eu encontrar posto aqui =D ) lá é sugerido que redirecionemos o nosso _output_ vindo do processo filho pro processo pai.
 

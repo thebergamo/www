@@ -8,25 +8,25 @@ image: /static/img/posts/organic-pattern/cover.jpeg
 original_post: https://medium.com/@thedon/organic-pattern-first-draft-146ae3265a95
 ---
 
-### **Overview**
+## **Overview**
 
 This is my first draft as a proposal for the creation of a pattern of development for the applications of this new Cloud generation that is emerging.
 
 The ideas that I will present below, were based on my short experience with Node.js and in my experience using other older languages such as PHP, Java and Delphi.
 
-### **Insight**
+## **Insight**
 
 As a software developer, design patterns and planning have always been crucial to their development, even though in theory they flow better than just being on daily bases hard work.
 
 When I started my first course focused on the development area, saw some interesting patterns are presented, what most caught my attention and made and still makes a lot of sense is the famous **[MVC](http://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller)** or Model-View-Controller in many system implementations that nature do even make much sense this development model.
 
-### **The Cloud**
+## **The Cloud**
 
 Well, we living on the “Boom of the **[Cloud Computing](http://en.wikipedia.org/wiki/Cloud_computing)** and is possible an application evolve of day to night, 1 to 100 and 1 million of users is much dynamic for you care alone of one server on the day and 12 hours later need to care 200 servers.
 
 The Cloud are coming to help us on the task of best scaling our applications and to think better in how we’ll develop the applications too. Study, Planning and Execute are task so common today(not always in this order, but we do as we can).
 
-### **The problem**
+## **The problem**
 
 Our focus now is how to make our applications more and more conducive and organized: Creation of New Features, Codes Maintenance, Sudden changes in the code among other tasks to be taken into account.
 
@@ -54,7 +54,7 @@ Another major problem we face in various languages and platforms is the complexi
 
 It is to help these scenarios Cloud, codes Organization and Avoid systems Giants and illegible the Organic Pattern will help.
 
-### **The possible Solution**
+## **The possible Solution**
 
 The idea behind the Organic Pattern is almost a mix of some new “ways” to develop systems today.
 
@@ -64,7 +64,7 @@ It was hence that the first ideas have emerged in parallel with this, I came acr
 
 From this line will try to better explain the idea of this proposed standard, is only conceptual for now.
 
-### **The Way**
+## **The Way**
 
 If we analyze the application (solution) as a whole, I can find many analogies with our body. Applications are also bodies.
 
@@ -80,7 +80,7 @@ At the moment we are planning the system the choice of database can make a big d
 
 Thus creating small modules that all of these makes possible the application itself.
 
-### **The End**
+## **The End**
 
 Well, is not something very tangible, these in which I include myself as well, because the idea in my design is good but still needs improvement. I would love to hear from other developers, experienced to get an idea whether to follow or simply ball forward. Thank you for your attention.
 

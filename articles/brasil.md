@@ -20,7 +20,7 @@ Na outra ponta das discussões estão os que defendem o governo atual e que tem 
 
 Vou focar em cada um desses 3 estágios nesse texto para tentar explicar o por que na minha opinião o ponto não é mais esse de discussão.
 
-### O Regime Militar de Volta
+## O Regime Militar de Volta
 
 Por mais que alguns acreditem que essa seria a melhor solução para os nossos problemas, infelizmente a história nos mostrou que não é. De mesmo modo que nos outros pontos um pouco de história ajuda a entender melhor o que não fazer.
 
@@ -30,7 +30,7 @@ O problema nesse regime é que o ser Humano, não lida muito bem com o poder. E 
 
 Temos vários exemplos de que isso não dá muito certo, tanto na história quanto na atualidade. O ser Humano é corrupto. Quando se tem o poder tudo muda, até seus valores.
 
-### Queremos Mudanças
+## Queremos Mudanças
 
 Tenho uma leve tendência a esse pessoal, mas alguns fazem de maneira agressiva demais que não resolve nada, apenas piora a situação e dá mais lenha na fogueira dos que discordam.
 
@@ -48,7 +48,7 @@ Ela foi eleita pela maior parte da população, então é antidemocrático tirar
 
 Só finalizando esse ponto, precisamos de mudanças, mas não podemos agir como “Animais” e apedrejar patrimônio público ou privado, temos que protestar pedindo mudanças no plano de governo para estabilizar a economia, não chamar o vice presidente para comandar a nação.
 
-### O Governo Atual
+## O Governo Atual
 
 Tenho minhas criticas ao governo, entretanto acredito que isso nunca mude, e isso é bom.
 
@@ -66,7 +66,7 @@ Os ricos de verdade, estão pouco se lixando pra maioria desses atentados ao gov
 
 As bolsas do Governo ajudam e muito a maioria da população, mas a falta de fiscalização e um pulso mais firme na distribuição dos benefícios acaba tornando muitos brasileiros acomodados e que querem apenas “mamar nas tetas do governo” e não ser produtivo para o pais.
 
-### Concluindo…
+## Concluindo…
 
 Acho que falei demais já, mas não mata alguns últimos parágrafos.
 

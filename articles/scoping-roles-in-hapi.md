@@ -7,7 +7,7 @@ image: /static/img/posts/hapi/scopes.jpeg
 original_post: https://medium.com/@thedon/scoping-roles-in-hapi-1f3ab86d6576
 ---
 
-### Brief
+## Brief
 
 When we write an API, after defining the auth system, and many other things, we need defining who will can access the routes. I like the **roles** where an user need has in yours roles the specific for access that content.
 
@@ -15,7 +15,7 @@ More or less like this: _"Jeff want to see the Mary's phone, but for that Jeff n
 
 Telephone catalog is old huh? Well, if Jeff aren't a subscriber for a telefone company, he cannot have a catalog (or asking for a friend with this role, but this is other story).
 
-### A Scope for access all things
+## A Scope for access all things
 
 If you see the last article, you're familiar with **[JWT auth in Hapi](https://medium.com/@thedon/auth-in-hapi-with-jwt-780ce4d072c7).** Well, this article is similar, but with just one improvement.
 
@@ -29,7 +29,7 @@ So, where I will get the roles? You need to adding this roles in your auth schem
 
 In my case, I generate the JWT in user's controller in cases of LogIn and Create, well, in both cases after success, the function getToken is called.
 
-### Get the token!
+## Get the token!
 
 If in your case you cannot have this function, you just adding role array or string in your JWT and this will work fine.
 
@@ -39,7 +39,7 @@ Instead just passing the ID in _getToken()_ function, you must passing the user 
 
 When you don't add _scope_ option \*\*in a route, no roles are required for access this route and the route will be accessible for all users without restrictions.
 
-### Roles Checked
+## Roles Checked
 
 The scopes are checked automatically by Hapi when you provide the informations. This check will occur in Auth cycle, so your controller not need to know about the user roles, because this is a function of the auth scheme not controller.
 
