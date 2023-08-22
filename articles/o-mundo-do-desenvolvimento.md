@@ -14,7 +14,7 @@ A cada dia que passa surgem novas linguagens que se propõem a facilitar a vida 
 
 Essas ferramentas ou linguagens acabam sendo úteis para outros programadores ao redor do mundo que se beneficiam disso. Eu realmente espero que esses ecossistemas nunca morram e sempre desenvolvam varias ferramentas ou linguagens legais para nós programadores aprendermos.
 
-### Node.js e Go
+## Node.js e Go
 
 Ultimamente tenho me deparado com duas grandes ferramentas para o desenvolvimento. Percebam que eu usei um “e” e não um “vs” ou “x”, por que eu realmente acho que ambas podem ser usadas em conjunto.
 
@@ -34,7 +34,7 @@ Entretanto a verbosidade de Go me deixa um pouco com preguiça. A biblioteca pad
 
 Quando o assunto são ferramentas, ambas as linguagens tem meu total respeito. Não irei entrar em méritos nesse aspecto, pois só para falar disso eu precisaria muito mais de que algumas palavras.
 
-### Concluindo
+## Concluindo
 
 Bom, eu tento ser um programador versátil e estar sempre por dentro das novidades para que eu consiga motivação também.
 

@@ -7,11 +7,11 @@ image: /static/img/posts/hapi/thin_controllers.png
 original_post: https://medium.com/@thedon/thin-controller-in-hapi-e52cfcb3962d
 ---
 
-### Brief
+## Brief
 
 In MVC [Controllers](http://stackoverflow.com/questions/1015813/what-goes-into-the-controller-in-mvc) just delegate the tasks for the right parts of the source code. But validate inputs and other things are located in that, for me its a dummy way to do this things, because your controller increase your weight with this unnecessary things and Hapi got a cool Academy for make your controller more **Thin**!
 
-### Thin Controller
+## Thin Controller
 
 Hapi provide us some tools for our controller lose weight, the most part of this tools is granted by the Hapi Request Life-Cycle, but this is an subject for another post.
 
@@ -35,7 +35,7 @@ So, my favorite feature provided by Hapi is the **_validate_** in route object, 
 
 Like conditional parameters, complex objects internals, arrays, and all of yours necessities want!
 
-### Power Resumed
+## Power Resumed
 
 In resume about all I said above, all validations and auth logic is provided by Hapi for you don't worry about this simple things. By the Request Life-Cycle if any of validation not are passing, your code are not executed. Fail fast!
 

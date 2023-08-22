@@ -9,6 +9,8 @@ image-alt: Girl looking for two paths in a cornfield
 original_post: https://medium.com/@thedon/uma-vis%C3%A3o-sobre-nosql-8ad02626fb6a
 ---
 
+## Introdução
+
 Quando ouvi pela primeira vez o termo NoSQL, imaginei logo “Não SQL??” e os questionamentos vieram tão rápido quanto esse pensamento: “Como assim não usar SQL não faz sentido algum isso”, “Não é possível usar um Banco de Dados não relacional” entre outros.
 
 Só que para a minha surpresa alguns meses depois fui conhecendo melhor a tecnologia abordada pelos NoSQL da vida e eles são bem interessantes, mais até do que eu imaginava que pudessem ser.Não sou especialista nessa tecnologia ainda, estou engatinhando nela, entretanto andei lendo alguns artigos e fiquei meio abismado com a modelagem proposta por alguns deles o que me deixou um pouco confuso.
@@ -32,6 +34,8 @@ Pelo menos até onde eu entendi a proposta do NoSQL é matar os relacionamentos 
 A partir do momento em que você começa a criar relacionamento entre tabelas em um banco NoSQL você perde totalmente a ideia do paradigma. Pensando por outro lado quando você isso você tem toda a velocidade do MongoDB em uma modelagem que você já usava antes é talvez um MySQL 3.0 (rsrs).
 
 Não defendo essa ideia! A proposta do NoSQL é não depender de relacionamentos, precisa guardar informações de outros dados guarde dentro do seu documento.Pelo menos foi isso que eu entendi, você não tem os velhos problemas de armazenamento que tinhamos há 10 ou 15 anos atrás ou o processamento. Você tem bons processadores e uma Engine fantástica no MongoDB use-a, não tenha medo de ficar replicando dados. A grande pergunta ai para que isso fique bem modelado é: O que pertence ao que?
+
+## Como Modelar
 
 > – Aqui começa o como modelar um NoSQL(MongoDB) –
 
@@ -121,13 +125,11 @@ Existem diversas abordagens para esse problema. Todas com vantagens e desvantage
 
 Se você escolheu um NoSQL modele um NoSQL. Acabei deixando muitas opiniões minhas nessa postagem, mas é para isso que eu fiz esse blog (rsrs).
 
+## Conclusão
+
 Bom, irei falar mais sobre o assunto de NoSQL e MongoDB em outra oportunidade, por hoje meu objetivo foi alcançado.Caso de concordem com o que eu falei deixem um comentário dizendo por que concordam ou simplesmente falem oi =).
 
 Caso discordem por favor deixem comentários também para que eu possa entender melhor esse mundo NoSQL ou rebater um pouco e gerarmos uma discussão saudável onde todos possam se beneficiar com as informações.
-
-Quando ouvi pela primeira vez o termo NoSQL, imaginei logo “Não SQL??” e os questionamentos vieram tão rápido quanto esse pensamento: “Como assim não usar SQL não faz sentido algum isso”, “Não é possível usar um Banco de Dados não relacional” entre outros.
-
-Está foi a minha visão sobre o tema. **Este blog post foi originalmente postado no meu antigo blog que não está mais disponível na internet em 2014. Muita coisa mudou desde então..**
 
 Quando ouvi pela primeira vez o termo NoSQL, imaginei logo “Não SQL??” e os questionamentos vieram tão rápido quanto esse pensamento: “Como assim não usar SQL não faz sentido algum isso”, “Não é possível usar um Banco de Dados não relacional” entre outros.
 

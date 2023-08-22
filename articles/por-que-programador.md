@@ -8,6 +8,8 @@ image: /static/img/posts/programador/cover.jpeg
 original_post: https://medium.com/@thedon/por-que-programador-3db0b2f8b72b
 ---
 
+## Por quê?
+
 Eu sempre gostei de descobrir como as coisas funcionavam. Desde jovem eu era apaixonado por desmontar e montar coisas e foi essa curiosidade por descobrir como tudo funciona que estou onde estou hoje.
 
 Desmontar, entender e remontar não é muito diferente de desenvolver um software. Muitas vezes você tem que desmontar todos os processos do cliente para conseguir entender o que cada parte deve fazer por completo e só depois começar a remontar todos esses processos em forma de software.

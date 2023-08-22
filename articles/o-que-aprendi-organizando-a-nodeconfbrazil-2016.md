@@ -9,7 +9,7 @@ image-alt: NodeConf Brazil 2016
 original_post: https://medium.com/@thedon/o-que-aprendi-organizando-a-nodeconfbrazil-2016-31eaf727423b
 ---
 
-# Conferências são diferentes de Meetups
+## Conferências são diferentes de Meetups
 
 Quando se organiza um Meetup, a maior preocupação são: Local e Palestrantes do
 dia, o que se parar para pensar é bem similar a uma conferência, bom
@@ -25,7 +25,7 @@ Se eu puder arriscar um palpite a parte que torna isso um pouco mais difícil é
 temos mais de 250 pessoas para acomodar, alimentar e agradar, se já é
 difícil agradar mulher e filhos imagina essa quantidade de pessoas!
 
-# Organização é o pilar mais importante
+## Organização é o pilar mais importante
 
 Nesse ponto, acho que vou acabar englobando alguns assuntos legais para eventos em geral.
 
@@ -50,7 +50,7 @@ pessoas possam tomar as decisões e resolver problemas, preferencialmente
 assim que eles surgem, acredito que isso conseguimos resolver bem no
 “segundo tempo” da jornada da organização.
 
-# Marketing é extremamente importante!
+## Marketing é extremamente importante!
 
 Como Marketing, entenda divulgação, ações para trazer mais pessoas ao evento e afins.
 
@@ -68,7 +68,7 @@ Visitar faculdades, empresas, apresentar a conferência e mostrar para seus
 “possíveis participantes” o por que é importante ir ao evento é algo bem
 complexo.
 
-# Apoio
+## Apoio
 
 Eu poderia falar sobre outros assuntos também, mas não quero me estender muito.
 
@@ -95,7 +95,7 @@ Por fim, aos nossos participantes do evento que foram no dia ver as palestras, n
 
 Meu muito obrigado a todos que nos ajudaram a construir essa história, sendo a primeira NodeConf na América Latina!
 
-# Feedback
+## Feedback
 
 Gostariamos também de ouvir o que vocês acharam desta edição da nossa Conf e o que poderiamos melhorar para as próximas!
 

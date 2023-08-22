@@ -7,13 +7,13 @@ image: /static/img/posts/hapi/hapi_logo.png
 original_post: https://medium.com/@thedon/how-to-use-hapi-decorate-3b3896045ae1
 ---
 
-### Brief
+## Brief
 
 Days ago, I want to improve performance to my boilerplate for Hapi + MongoDB apps. On this crusade, I came across an interesting feature in the Hapi documentation: **[Decorate](http://hapijs.com/api#serverdecoratetype-property-method-options).**
 
 This open my mind about how handle my throws in the source of my Hapi apps, and I want to share with you!
 
-### Previously
+## Previously
 
 Previously I meet **Decorate** my implementation in _controllers/xpto_ is something like this:
 
@@ -32,7 +32,7 @@ But you can see in this case I need to import Boom and reply then every time I n
 
 </aside>
 
-### Decorate to the rescue!
+## Decorate to the rescue!
 
 [lib/decorate.js plugin](https://gist.github.com/thebergamo/e02147f717954a820bf0#file-decorate-js)
 
@@ -46,7 +46,7 @@ New controllers/user.js with decorate
 
 Just cleaner right?
 
-### More than you saw here
+## More than you saw here
 
 Decorates can do more than just implement a simple wrapper for errors in your controller. You can extend the request, reply and server interfaces just like you saw above.
 
@@ -54,7 +54,7 @@ Importing and load your plugin in one place and sharing it in your entire applic
 
 You can see more about this in Hapi Documentation [here](http://hapijs.com/api#serverdecoratetype-property-method-options).
 
-### Conclusion
+## Conclusion
 
 This awesome feature of Hapi is very helpful if you want to write less code and keep [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) in your mind for bind your focus on your Business.
 
@@ -62,7 +62,7 @@ This and another studies are based on my Boilerplate called [Start Hapiness](htt
 
 ---
 
-### Updates
+## Updates
 
 **2015–12–04 23:12:00**
 

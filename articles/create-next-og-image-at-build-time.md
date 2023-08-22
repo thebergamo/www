@@ -51,7 +51,7 @@ Ok, tools in place.
 
 ![Yay celebration gif](/static/img/posts/next-og-build/yay.gif)
 
-```typescript filename="lib/og-generator.tsx"
+```tsx title="lib/og-generator.tsx"
 import satori from 'satori'
 import { Resvg } from '@resvg/resvg-js'
 import { writeFile, readFile, stat } from 'fs/promises'
@@ -96,7 +96,7 @@ This is a simplified version of it, because we have to deal with Fonts as well, 
 - Place it inside `fonts` folder
 - Load it
 
-```typescript filename="lib/og-generator.tsx"
+```tsx title="lib/og-generator.tsx"
 import { writeFile, readFile, stat } from 'fs/promises'
 import { join } from 'path'
 ...
@@ -151,7 +151,7 @@ So, what is the trick? I will use the `getStaticProps` method to generate my sta
 
 Take a look into the snippet:
 
-```typescript filename="pages/blog/[slug].tsx"
+```tsx title="pages/blog/[slug].tsx"
 type Props = {
   ...
   ogImage: string

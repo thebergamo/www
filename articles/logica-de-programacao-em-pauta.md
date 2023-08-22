@@ -18,13 +18,13 @@ Uma destas foi no curso técnico da **ETEC Coronel Raphael Brandão** em Barreto
 
 Let’s vamos aos principais problemas na minha visão:
 
-### Ferramentas
+## Ferramentas
 
 Irei fazer um comparativo das 3 vezes que cursei o Lógica de Programação e uma quarta da qual eu acredito ser mais prática e eficaz.
 
 Acredito que uma das premissas de usar as ferramentas listadas abaixo para o ensino da lógica de programação seja que o estudante já tenha familiaridade com uma dessas ferramentas utilizadas no mercado e ser um bom inicio para a carreira do mesmo.
 
-### #1 Lógica de Programação com Java
+## #1 Lógica de Programação com Java
 
 [Java](https://pt.wikipedia.org/wiki/Java_%28linguagem_de_programa%C3%A7%C3%A3o%29) é uma das linguagens mais utilizadas no mundo, além de ser a linguagem de programação utilizada para o desenvolvimento de aplicativos Android.
 
@@ -46,7 +46,7 @@ O que mexe um pouco com a nossa natureza, pois simplesmente ignorar parte import
 
 O que nos leva ao nosso segundo exemplo.
 
-### #2 Lógica de Programação com C/C++
+## #2 Lógica de Programação com C/C++
 
 [C/C++](https://pt.wikipedia.org/wiki/C%2B%2B) é praticamente a mãe de muitas linguagens, foi uma das primeiras linguagens criadas para uso “doméstico” se posso usar esse termo. A linguagem em si, dá praticamente super poderes para seu usuário, pois ele tem a possibilidade de escrever também códigos de mais baixo nível, entretanto a responsabilidade de cuidar da memória também passa para o programador.
 
@@ -66,7 +66,7 @@ Novamente, temos diversos elementos que “Nós não precisamos saber o que sign
 
 Se não precisamos saber para o que servem essas partes do código agora, não seria melhor achar alguma linguagem de mercado que pudêssemos simplesmente usar sem ter que carregar códigos que não precisamos conhecer ou usar uma estrutura sem saber realmente a necessidade?
 
-### #3 Lógica de Programação usando Papel e Caneta
+## #3 Lógica de Programação usando Papel e Caneta
 
 Para ser bem sincero essa é uma das que menos me frustra, claro hoje em dia. Na época que eu estava iniciando, em meados de 2010, o que eu mais queria era passar mais tempo no computador e o máximo que eu pudesse escrever e compilar diretamente nele seria o ideal.
 
@@ -76,7 +76,7 @@ Por um lado isso é bom, mas se pensarmos que o retorno do que escrevemos é um 
 
 Com o tempo, isso melhora e conseguimos até prever erros apenas olhando o código sem rodar o mesmo, mas isso leva tempo e experiência.
 
-### #4 Lógica de Programação com linguagens interpretadas
+## #4 Lógica de Programação com linguagens interpretadas
 
 Quando utilizamos linguagens como **C/C++** ou **Java** precisamos Linkeditar/Compilar nosso código para algo que o computador entenda. E isso tem que entrar no seu ciclo de desenvolvimento, além de ter códigos que você não entende, ainda tem que executar uns comandos lá na telinha preta também.
 
@@ -100,7 +100,7 @@ print “Hello, World!”
 
 Perceba que você não tem nenhum cabeçalho especifico ou nada do gênero para conseguir rodar o seu programa de exemplo, imprimindo na sua tela o texto _Hello, world!_.
 
-### KISS — Keep It Simple Stupid
+## KISS — Keep It Simple Stupid
 
 O importante é aprendermos lógica e o ideal é manter o mais simples possível, não existe um motivo para usar uma ferramenta que adiciona uma complexidade desnecessária ao conjunto da obra.
 
@@ -108,7 +108,7 @@ Em computação, você deve ouvir muito o termo _[KISS](https://pt.wikipedia.org
 
 O foco deve ser sempre no objetivo(frase feita). Ensinar Java, C/C++ ou outra linguagem que demanda um pouco mais de entendimento é o foco nas aulas de lógica de programação? Se sim, continuem, mas se o foco realmente for ensinar a lógica, devemos quebrar um pouco o pensamento arcaico e voltarmos ao princípio e usar a maneira mais simples e eficiente.
 
-### Melhorias Continuas
+## Melhorias Continuas
 
 A área da computação, independente de onde você atue, é sempre muito iterativa e você deve sempre buscar melhorar a cada ciclo de sua aprendizagem.
 

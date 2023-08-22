@@ -12,7 +12,7 @@ original_post: https://medium.com/@thedon/precisamos-falar-sobre-os-novos-desenv
 💡 Talvez seja apenas um sentimento meu, mas mesmo que seja acho que é um ponto válido a compartilhar.
 </aside>
 
-### Conhecendo a casa nova!
+## Conhecendo a casa nova!
 
 Quando entramos em uma empresa nova de desenvolvimento, seja uma startup, uma consultoria, uma software house ou até mesmo grandes corporações, algo que me deixa um pouco intrigado é a falta de documentação para novos desenvolvedores.
 
@@ -22,7 +22,7 @@ Mas, a escassez desses manuais torna-se um problema também, uma vez que estamos
 
 Quando a equipe cresce precisamos ter um mecanismo para que nossos desenvolvedores possam fazer o bootstrap da nossa aplicação da maneira mais simples e rápida para que eles consigam se encontrar no código e produzir algo útil.
 
-### Falar é mais fácil do que entender o código
+## Falar é mais fácil do que entender o código
 
 Como eu fiz o sistema, ou peguei ele desde o começo ou a versão 2.0 onde matamos tudo o que tinha na anterior é tudo muito claro na minha mente. Mesmo que usando as ferramentas mais comuns, cada sistema tem uma peculiaridade que deve constar em algum lugar de fácil acesso a ingressantes na empresa.
 
@@ -40,7 +40,7 @@ git clonegit@github.com:thebergamo/start-hapiness.git
 
 > "Tem que instalar qual banco de dados? Tem usuário padrão setado no código?"
 
-### Business é importante também!
+## Business é importante também!
 
 Certo, deixando o código um pouco de lado, vamos falar um pouco sobre o que estamos desenvolvendo também, não apenas o código em si.
 
@@ -54,7 +54,7 @@ Sabendo o que a feature xpto1 representa no contexto geral da aplicação, dos n
 
 Mas, quando sabemos que essa função vai ser parte de uma outra função que vai retornar as _estatísticas de acessos do usuário_ ou algo que seja realmente importante pro futuro, pode dar uma brecha para fazermos uma função genérica que possa ser estendida no futuro já que uma nova função talvez fosse gerada para suprir uma outra necessidade, mas como você sabia que essa necessidade viria, tornou sua função mais extensível para já estar preparada para o que viria no futuro.
 
-### Precisamos ter em vista futuros colegas chegando!
+## Precisamos ter em vista futuros colegas chegando!
 
 O que quero dizer é que você como desenvolvedor que está iniciando um projeto na sua nova empresa deve ter sempre em mente que sua equipe pode crescer da noite pro dia, dependendo do sucesso da sua empresa, sendo assim você vai tem que estar preparado para não desperdiçar 1 ou 2 meses treinando o novo funcionário em coisas banais do seu sistema, pois poderia investir algum tempo a mais e documentar os processos e as regras de negócios que sua API deveria contemplar, ou pelo menos um resumo.
 
@@ -62,7 +62,7 @@ O que quero dizer é que você como desenvolvedor que está iniciando um projeto
 
 E você desenvolvedor que está ingressando na empresa também deveria estar mais preocupado em entender mais sobre o que está fazendo, não apenas sentar e ouvir as ordens e simplesmente fazer.
 
-### Entenda, Pense e Faça!
+## Entenda, Pense e Faça!
 
 Pois em algum momento, desenvolvedores que simplesmente escrevem o código sem saber para que estão escrevendo serão substituídos por máquinas, pois podem ser automatizados.
 
