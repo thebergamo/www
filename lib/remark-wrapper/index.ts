@@ -41,20 +41,8 @@ function remarkWrapper({
         ]
 
         node.children = wrapper
-        console.log('NODE SELECTED')
-        console.log({ node })
       }
     })
-    // const [toc, ...article] = { ...tree.children }
-    // tree.children = [
-    //   toc,
-    //   {
-    //     type: 'html',
-    //     tagName: 'article',
-    //     properties: { className: 'article-wrapper' },
-    //     children: article,
-    //   },
-    // ]
   }
 }
 

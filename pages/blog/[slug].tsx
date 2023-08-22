@@ -93,7 +93,6 @@ export async function getStaticProps({
   let post = null
   let errorCode = null
   let ogImage = ''
-  let toc = null
 
   try {
     const slug = (params?.slug ?? '') as string
@@ -115,7 +114,6 @@ export async function getStaticProps({
     post.content = await convertMarkdownToHtml(post.content)
     post.image_credit = await convertMarkdownToHtml(post.image_credit)
 
-    console.log({ toc })
     ogImage = await generateImage({
       data: {
         title: post.title,
