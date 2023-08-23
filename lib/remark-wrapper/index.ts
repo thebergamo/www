@@ -1,5 +1,14 @@
+import { HtmlElementNode } from '@jsdevtools/rehype-toc'
 import type { Root, RootContent } from 'mdast'
 import { visit } from 'unist-util-visit'
+
+declare module 'mdast' {
+  // eslint-disable-next-line no-unused-vars
+  interface RootContentMap {
+    // Allow using toml nodes defined by `remark-frontmatter`.
+    element: HtmlElementNode
+  }
+}
 
 type RemarkWrapperOptions = {
   containerWrapperClass?: string
